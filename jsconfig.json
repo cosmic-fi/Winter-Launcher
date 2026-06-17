@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "bundler",
+    "target": "ESNext",
+    "module": "ESNext",
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "checkJs": true,
+    "allowJs": true,
+    "strict": false,
+    "types": ["svelte"]
+  },
+  "include": [
+    "global.d.ts",
+    "src/**/*.js",
+    "src/**/*.svelte",
+    "src/**/*.ts",
+    "svelte.config.js",
+    "vite.config.mjs"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "release",
+    "**/.svelte2tsx-language-server-files/**"
+  ]
+}

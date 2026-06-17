@@ -1,0 +1,1461 @@
+{
+  "common":{
+    "appName": "Winter Launcher",
+    "grettings": {
+      "hello": "Hello!",
+      "welcome":"Welcome to Winter Launcher"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "tabs":{
+      "general": "General",
+      "game": "Game",
+      "mods": "Mods",
+      "launcher": "Launcher",
+      "storage": "Storage",
+      "developer": "Developer",
+      "about": "About"
+    },
+    "general":{
+      "appearance": {
+        "label": "Appearance",
+        "theme": {
+          "label": "Theme",
+          "description": "Choose the theme of the launcher.",
+          "launcherStyle": {
+            "label": "Launcher Style",
+            "standard": "Standard",
+            "minecraft": "Classic"
+          },
+          "themes": {
+            "light": "Light",
+            "dark": "Dark",
+            "peach-sherbet": "Peach Sherbet",
+            "under-the-sea": "Under the Sea",
+            "dusk-fall": "Dusk Fall",
+            "pretty-in-pink": "Pretty in Pink",
+            "retro-revival": "Retro Revival",
+            "lollypop": "Lollypop",
+            "candy-cane": "Candy Cane"
+          }
+        },
+        "language": {
+          "label": "Language",
+          "description": "Select the language for the launcher.",
+          "languages": {
+            "english": "English",
+            "bahasa": "Bahasa Indonesia",
+            "turkish": "Türkçe",
+            "french": "Français",
+            "russian": "Русский",
+            "spanish": "Español"
+          }
+        }
+      },
+      "startup": {
+        "label": "Startup",
+        "minimizeToTray": "Minimize to Tray on Close",
+        "minimizeToTrayDescription": "Start the app minimized to the system tray."
+      }
+    },
+    "game": {
+      "versions": "Versions",
+      "showSnapshots": "Show Snapshots versions of Minecraft",
+      "showSnapshotsDescription": "Show snapshot (beta/experimental) versions of Minecraft in the launcher.",
+      "performance": {
+        "label": "Performance",
+        "ramAllocation": "Ram allocation",
+        "ramAllocationDescription": "Set the amount of RAM allocated to the game. Minimum recommended Ram is at least 2GB for slow machines."
+      },
+      "runtime": {
+        "label": "Runtime",
+        "javaPath": "Java path",
+        "javaPathDescription": "Specify the path to the Java executable.",
+        "gameArgs": "Game Arguments",
+        "gameArgsDescription": "Specify game arguments to launch the game (advanced users only).",
+        "gameArgsPlaceholder": "e.g. java -Xmx4G -jar minecraft.jar",
+        "jvmArguments": "JVM Arguments",
+        "jvmArgumentsDescription": "Set additional JVM arguments for advanced performance tuning.",
+        "jvmArgumentsPlaceholder": "e.g. -Xmx4G -XX:+UseG1GC",
+        "environmentVariables": "Environment Variables",
+        "environmentVariablesDescription": "Set environment variables for the runtime process.",
+        "environmentVariablesPlaceholder": "e.g. JAVA_HOME=/usr/lib/jvm/java-17",
+        "runDetached": "Run Detached",
+        "runDetachedDescription": "Run the game in detached mode, allowing the launcher to close while the game is still running.",
+        "verifyGameFiles": "Verify Game Files",
+        "verifyGameFilesDescription": "Verify game files integrity before launching.",
+        "verifyGameFilesWarning": "Warning: Enabling this option may increase launch time significantly and will delete all previous game progress.",
+        "intelEnabledMac": "Enable Intel Graphics on macOS",
+        "intelEnabledMacDescription": "Enable Intel graphics acceleration on macOS machines.",
+        "runAsAdmin": "Run as Administrator",
+        "runAsAdminDescription": "Launch the game with administrator privileges.",
+        "ignored": "Ignored Files",
+        "ignoredDescription": "Specify files or directories to ignore when verifying game files."
+      },
+      "display":{
+        "label": "Display",
+        "resolution": "Resolution",
+        "fullscreen": "Fullscreen",
+        "resolutionDescription": "Set the resolution of the game window.",
+        "resolutions": {
+          "fullHD": "1920x1080 (Full HD)",
+          "quadHD": "2560x1440 (Quad HD)",
+          "ultraHD": "3840x2160 (4K UHD)",
+          "hd": "1366x768 (HD)",
+          "hdReady": "1280x720 (HD)",
+          "hdPlus": "1600x900 (HD+)",
+          "wxgaPlus": "1440x900 (WXGA+)",
+          "xga": "1024×768 (XGA)"
+        }
+      }
+    },
+    "launcher": {
+      "updates": "Updates",
+      "checkForUpdates": "Check for updates",
+      "checkForUpdatesDescription": "Check for new launcher updates on startup.",
+      "integration": {
+        "label": "Integration",
+        "discordRPC": "Discord Rich Presence",
+        "discordRPCDescription": "Enable or disable Discord Rich Presence integration."
+      },
+      "notification": {
+        "label": "Notifications",
+        "systemNotifications": "System Notifications",
+        "systemNotificationsDescription": "Show native system notifications.",
+        "showUpdateNotification": "Show Notification for Updates",
+        "showUpdateNotificationDescription": "Show update notifications.",
+        "playSound": "Play sound",
+        "playSoundDescription": "Play a sound when notifications appear.",
+        "categories": {
+          "label": "Notification Categories",
+          "description": "Choose which types of notifications to show.",
+          "updates": "Updates",
+          "launches": "Game Launches",
+          "downloads": "Downloads",
+          "errors": "Errors",
+          "general": "General"
+        }
+      }
+    },
+    "storage": {
+      "folders": "Folders",
+      "launcherFolder": "Launcher folder",
+      "launcherFolderDescription": "The directory where launcher is installed.",
+      "minecraftFolder": "Minecraft folder",
+      "minecraftFolderDescription": "The directory where Minecraft is installed.",
+      "modFolder": "Mod folder",
+      "modFolderDescription": "The directory where mods are installed."
+    },
+    "developer": {
+      "debug": "Debug",
+      "enableDevTools": "Enable DevTools",
+      "enableDevToolsDescription": "Enable developer tools for debugging.",
+      "experimental": "Experimental",
+      "allowBetaFeatures": "Allow Beta features",
+      "allowBetaFeaturesDescription": "Enable experimental launcher features."
+    },
+    "about": {
+      "version": "Version",
+      "checkForUpdates": "Check for Updates",
+      "credits": "Credits",
+      "developedBy": "Developed and crafted with 💖 by <b class=\"credit-owner-text\">Cosmic</b>&nbsp;&&nbsp;<b class=\"credit-owner-text\">Olly</b>",
+      "specialThanks": "Special thanks to all contributors and testers.",
+      "openSourceLibraries": "Open Source Libraries",
+      "extraOpenSourceLibrariesDescription": "Other open source libraries used in this project.",
+      "apisUsed": "APIs Used",
+      "sourceCode": "Source Code",
+      "donate": "Like the project!",
+      "donateButton": "Buy me a coffee",
+      "donateDescription": "If you like this project, consider buying me a coffee to support development!",
+      "contributors": "Contributors",
+      "disclaimer": "Disclaimer",
+      "disclaimerDescription": "This launcher is an independent project and is not affiliated with Mojang, Microsoft, or any official Minecraft entity. All trademarks and copyrights belong to their respective owners.",
+      "devUnlockedMessage": "Developer mode activated! 😹",
+      "alreadyADevMessage": "You are already a developer! 😹",
+      "libraries": {
+        "svelte": "Svelte - Reactive UI Framework",
+        "fontAwesome": "Font Awesome - Icon Library",
+        "skin3d": "Skin3d - 3d skin rendering",
+        "oriMcc": "Ori MCC - Game launching & version management",
+        "msmc": "MSMC - Authentication & Account refreshing",
+        "starlightSkin": "Starlight Skins - Skin API"
+      },
+      "githubRepository": "Github Repository",
+      "updateCheck": {
+        "checking": "Checking for updates...",
+        "upToDate": "Your launcher is up to date!",
+        "downloading": "Downloading update...",
+        "installing": "Installing update... ({version})",
+        "installedSuccess": "Update installed successfully! Restart to apply changes.",
+        "installFailed": "Failed to install update: {error}",
+        "checkFailed": "Failed to check for updates (GitHub API unavailable)",
+        "devModeDisabled": "Updates are disabled in development mode"
+      }
+    },
+    "buttons": {
+      "resetToDefault": "Reset",
+      "close": "Close",
+      "save": "Save",
+      "cancel": "Cancel",
+      "browse": "Browse",
+      "select": "Select"
+    }
+  },
+  "invoker": {
+    "loading": "LOADING",
+    "description": "Please wait while the process completes.",
+    "closeNote": "You can close the active window to stop this process"
+  },
+  "mainContent": {
+    "playersOnline": "Players online now",
+    "supportProject": "Support Project",
+    "console": "Console",
+    "minimize": "Minimize",
+    "closeApp": "Close App",
+    "selectAccount": "Select Account",
+    "noAccountSelected":"No account selected",
+    "noAccounts": "No accounts added",
+    "manageAccount": "Accounts",
+    "addAccount": "Add Account",
+    "adCredit": "Powered by Beam-i",
+    "about": "About",
+    "donate": "Donate",
+    "maximize": "Maximize",
+    "restore": "Restore",
+    "onboarding": {
+      "welcome": {
+        "title": "Welcome to Winter Launcher",
+        "description": "Your ultimate Minecraft launcher with powerful features and beautiful customization.",
+        "feature1": "Manage multiple instances with different mods and versions",
+        "feature2": "Browse and install mods, resource packs, and shaders",
+        "feature3": "Customize your experience with themes and settings"
+      },
+      "instances": {
+        "title": "Instance Management",
+        "description": "Create and manage multiple Minecraft instances with ease. Each instance can have its own mods, resource packs, and settings.",
+        "feature1": "Create instances with Vanilla, Forge, or Fabric loaders",
+        "feature2": "Install mods directly from Modrinth",
+        "feature3": "Switch between instances seamlessly"
+      },
+      "customization": {
+        "title": "Customize Your Experience",
+        "description": "Make Winter Launcher truly yours with themes, settings, and personalized configurations.",
+        "feature1": "Choose from multiple beautiful themes",
+        "feature2": "Configure memory allocation and Java settings",
+        "feature3": "Enable Discord Rich Presence and notifications"
+      },
+      "ready": {
+        "title": "You're All Set!",
+        "description": "Winter Launcher is ready for your adventure. Start exploring mods, creating instances, and diving into the world of Minecraft like never before!"
+      },
+      "buttons": {
+        "skip": "Skip",
+        "getStarted": "Get Started",
+        "next": "Next",
+        "previous": "Previous",
+        "finish": "Finish"
+      },
+      "toasts": {
+        "welcomeMessage": "Welcome to Winter Launcher! Enjoy your adventure!"
+      },
+      "tosAgreement": "By using Winter Launcher, you agree to the Terms of Service"
+    },
+    "social": {
+      "github": "Github",
+      "discord": "Discord",
+      "twitter": "Twitter"
+    },
+    "adsBox": {
+      "legalText": "By using Winter Launcher, you agree to our",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "adProvider": "QPlayer",
+      "copyright": "© {year} Winter Launcher. All rights reserved."
+    },
+    "errors": {
+      "failedToLoadPlayers": "Failed to load player counts"
+    },
+    "launch": {
+      "label": "Launch",
+      "launching": "Launching",
+      "cancel": "Cancel",
+      "closeGame": "Close Game",
+      "launchStatus": {
+        "preparing": "Preparing",
+        "downloading": "Downloading",
+        "launching": "Launching",
+        "patching": "Patching",
+        "libraries": "Libraries",
+        "assets": "Assets",
+        "waiting": "Waiting",
+        "retrying": "Retrying",
+        "extracting": "Extracting Files",
+        "verifying": "Verifying Files",
+        "ready": "Launch",
+        "running": "Game Running",
+        "launchFailed": "Launch failed, please try again later!",
+        "error": "Launch Failed",
+        "cancelled": "Launch cancelled"
+      },
+      "changeVersion": "Change Version",
+      "gameTypes": {
+        "vanilla": "Vanilla",
+        "forge": "Forge",
+        "fabric": "Fabric"
+      },
+      "versionTypes": {
+        "release": "Release",
+        "stable": "Stable",
+        "mc": "MC"
+      }
+    },
+    "home": {
+      "welcomeBanner": {
+        "greeting": "Hello!",
+        "title": "Welcome to Winter Launcher"
+      },
+      "buttons": {
+        "createInstance": "Create instance",
+        "seeAll": "See All",
+        "play": "Play",
+        "cancel": "Cancel",
+        "viewMore": "View More"
+      },
+      "launchStatus": {
+        "preparing": "Preparing...",
+        "downloading": "Downloading...",
+        "extracting": "Extracting...",
+        "verifying": "Verifying...",
+        "running": "Running",
+        "launching": "Launching..."
+      },
+      "sections": {
+        "recentlyAdded": "Recently Added",
+        "popularMods": "Popular Mods",
+        "noPopularMods": "No popular mods",
+        "noPopularModsDescription": "Unable to load popular mods at this time.",
+        "author":"By {author}",
+        "period": {
+          "justNow": "Just now",
+          "minutesAgo": "m ago",
+          "hoursAgo": "h ago",
+          "daysAgo": "d ago",
+          "weeksAgo": "w ago",
+          "neverPlayed":"Never Played"
+        }
+      },
+      "alerts": {
+          "noAccountSelected": "No account selected",
+          "invalidOnlineCredentials": "Invalid online account credentials",
+          "noVersionSelected": "No Minecraft version selected",
+          "noMinecraftDirectory": "Minecraft directory not specified",
+          "memoryConfiguration": "Minimum memory must be less than maximum memory",
+          "memoryExceedsSystem": "Maximum memory exceeds system memory",
+          "launchInProgress": "Launch already in progress"
+      }
+    },
+    "instances": {
+      "sidebar": {
+        "title": "Instances",
+        "createInstanceTitle": "Create Instance",
+        "noInstancesFound": "No instances found. Create one to get started!"
+      },
+      "emptyDetails": {
+        "title": "Select an Instance",
+        "description": "Choose an instance from the sidebar to view and manage"
+      },
+      "tabs": {
+        "overview": "Overview",
+        "mods": "Mods",
+        "resourcepacks": "Resource Packs",
+        "shaders": "Shaders"
+      },
+      "header": {
+        "launch": "Launch",
+        "launching": "Launching",
+        "cancel": "Cancel",
+        "openFolder": "Open Folder",
+        "settings": "Settings",
+        "delete": "Delete"
+      },
+      "overview": {
+        "gameVersion": "Game Version",
+        "loader": "Loader",
+        "loaderVersion": "Loader Version",
+        "created": "Created",
+        "lastPlayed": "Last Played",
+        "memory": "Memory",
+        "javaPath": "Java Path",
+        "autoDetected": "Auto-detected",
+        "installedMods": "Installed Mods",
+        "resourcePacks": "Resource Packs",
+        "shaders": "Shaders",
+        "descriptionTitle": "Description"
+      },
+      "mods": {
+        "title": "Installed Mods",
+        "addMod": "Add Mod",
+        "noModsInstalled": "No mods installed"
+      },
+      "resourcepacks": {
+        "title": "Resource Packs",
+        "addResourcePack": "Add Resource Pack",
+        "noResourcePacksInstalled": "No resource packs installed"
+      },
+      "shaders": {
+        "title": "Shaders",
+        "addShader": "Add Shader",
+        "noShadersInstalled": "No Shaders installed"
+      },
+      "browsers": {
+        "modBrowser": {
+          "title": "Browse Mods",
+          "searchPlaceholder": "Search mods...",
+          "filters": {
+            "loaders": {
+              "all": "All Loaders",
+              "forge": "Forge",
+              "fabric": "Fabric",
+              "quilt": "Quilt",
+              "neoforge": "NeoForge"
+            },
+            "environment": {
+              "all": "Environment: All",
+              "client": "Client",
+              "server": "Server"
+            },
+            "sort": {
+              "relevance": "Sort: Relevance",
+              "downloads": "Downloads",
+              "follows": "Follows",
+              "updated": "Recently Updated"
+            },
+            "itemCount": {
+              "10": "Items: 10",
+              "20": "Items: 20",
+              "30": "Items: 30",
+              "50": "Items: 50"
+            }
+          },
+          "actions": {
+            "add": "Add",
+            "adding": "Adding...",
+            "remove": "Remove",
+            "installed": "Installed"
+          },
+          "toasts": {
+            "addedSuccessfully": "Mod added successfully",
+            "failedToAdd": "Failed to add mod",
+            "removedSuccessfully": "Mod removed successfully",
+            "failedToRemove": "Failed to remove mod"
+          },
+          "empty": {
+            "noResultsFound": "No results found",
+            "tryAdjustingFilters": "Try adjusting your search terms or filters"
+          },
+          "labels": {
+            "allCategories": "All Categories",
+            "by": "by",
+            "downloads": "downloads"
+          },
+          "dependencies": {
+            "toggle": "{count} dependencies",
+            "toggleSingular": "{count} dependency",
+            "requiredCount": "({count} required)",
+            "required": "Required",
+            "optional": "Optional",
+            "unknownMod": "Unknown mod",
+            "loading": "Loading..."
+          }
+        },
+        "resourcePackBrowser": {
+          "title": "Browse Resource Packs",
+          "searchPlaceholder": "Search resource packs...",
+          "filters": {
+            "sort": {
+              "trending": "Sort: Trending",
+              "relevance": "Relevance",
+              "follows": "Follows",
+              "updated": "Recently Updated"
+            },
+            "itemCount": {
+              "10": "Items: 10",
+              "20": "Items: 20",
+              "30": "Items: 30",
+              "50": "Items: 50"
+            }
+          },
+          "actions": {
+            "add": "Add",
+            "adding": "Adding...",
+            "remove": "Remove"
+          },
+          "toasts": {
+            "addedSuccessfully": "Resource pack added successfully",
+            "failedToAdd": "Failed to add resource pack",
+            "removedSuccessfully": "Resource pack removed successfully",
+            "failedToRemove": "Failed to remove resource pack"
+          },
+          "empty": {
+            "noResultsFound": "No results found",
+            "tryAdjustingFilters": "Try adjusting your search terms or filters"
+          },
+          "labels": {
+            "allCategories": "All Categories",
+            "by": "by",
+            "downloads": "downloads"
+          }
+        },
+        "shaderBrowser": {
+          "title": "Browse Shaders",
+          "searchPlaceholder": "Search shaders...",
+          "labels": {
+            "allCategories": "All Categories",
+            "by": "by",
+            "downloads": "downloads"
+          },
+          "filters": {
+            "sort": {
+              "newest": "Sort: Newest",
+              "relevance": "Relevance",
+              "downloads": "Downloads",
+              "updated": "Recently Updated"
+            },
+            "itemCount": {
+              "10": "Items: 10",
+              "20": "Items: 20",
+              "30": "Items: 30",
+              "50": "Items: 50"
+            }
+          },
+          "actions": {
+            "add": "Add",
+            "adding": "Adding...",
+            "remove": "Remove"
+          },
+          "toasts": {
+            "addedSuccessfully": "Shader added successfully",
+            "failedToAdd": "Failed to add shader",
+            "removedSuccessfully": "Shader removed successfully",
+            "failedToRemove": "Failed to remove shader"
+          },
+          "empty": {
+            "noResultsFound": "No results found",
+            "tryAdjustingFilters": "Try adjusting your search terms or filters"
+          }
+        }
+      },
+      "deleteModal": {
+        "title": "Delete Instance?",
+        "message": "Are you sure you want to delete the instance \"{name}\"? This action cannot be undone and will remove all instance data!"
+      },
+      "toasts": {
+        "instanceDeletedSuccessfully": "Instance deleted successfully",
+        "noValidSettingsToSave": "No valid settings to save",
+        "failedToSaveSettings": "Failed to save settings",
+        "instanceFolderNotSet": "Instance folder not set",
+        "failedToOpenFolder": "Failed to open folder"
+      }
+    },
+    "crashRecovery": {
+      "title": "Game Crashed",
+      "exitCode": "Exit Code",
+      "runtime": "Runtime",
+      "crashWarning": "This instance has crashed {count} times recently.",
+      "clearCrashHistory": "Clear crash history",
+      "recoverySuggestions": "Recovery Suggestions",
+      "hideAdvanced": "Hide Advanced Options",
+      "showAdvanced": "Show Advanced Options",
+      "advancedCrashInfo": "Advanced Crash Information",
+      "signal": "Signal",
+      "none": "None",
+      "timeSinceLastOutput": "Time since last output",
+      "crashType": "Crash type",
+      "crashCount": "Crash count",
+      "viewGameLogs": "View Game Logs",
+      "analyzingCrash": "Analyzing crash...",
+      "toasts": {
+        "recoverySuccess": "Recovery suggestions generated successfully",
+        "recoveryFailed": "Recovery attempt failed: {message}",
+        "settingsApplied": "Settings applied successfully",
+        "crashHistoryCleared": "Crash history cleared"
+      }
+    },
+    "discover": {
+      "title": "Discover",
+      "searchPlaceholder": "Search...",
+      "filters": {
+        "show": {
+          "all": "Show: All",
+          "mods": "Mods",
+          "resourcepacks": "Resource Packs",
+          "shaders": "Shaders"
+        },
+        "loaders": {
+          "all": "All Loaders",
+          "forge": "Forge",
+          "fabric": "Fabric",
+          "quilt": "Quilt",
+          "neoforge": "NeoForge"
+        },
+        "itemCount": {
+          "10": "Items: 10",
+          "20": "Items: 20",
+          "50": "Items: 50",
+          "100": "Items: 100"
+        }
+      },
+      "sections": {
+        "trendingMods": "Trending Mods",
+        "loadingTrendingMods": "Loading trending mods...",
+        "noTrendingMods": "No trending mods found",
+        "popularResourcePacks": "Popular Resource Packs",
+        "loadingResourcePacks": "Loading resource packs...",
+        "noResourcePacks": "No resource packs found",
+        "shaders": "Shaders",
+        "loadingShaders": "Loading shaders...",
+        "noShaders": "No shaders found",
+        "recentlyUpdated": "Recently Updated",
+        "loadingRecentlyUpdated": "Loading recently updated...",
+        "noRecentlyUpdated": "No recently updated items found",
+        "noResultsFound": "No results found"
+      },
+      "buttons": {
+        "viewMore": "View More"
+      },
+      "cards": {
+        "byAuthor": "By {author}",
+        "downloads": "Downloads",
+        "lastUpdated": "Last Updated"
+      }
+    },
+    "resourcepacks": {
+      "title": "Resource Packs",
+      "searchPlaceholder": "Search resource packs...",
+      "filters": {
+        "categories": {
+          "all": "All Categories"
+        },
+        "sort": {
+          "trending": "Sort: Trending",
+          "relevance": "Relevance",
+          "follows": "Follows",
+          "updated": "Recently Updated"
+        },
+        "itemCount": {
+          "10": "Items: 10",
+          "20": "Items: 20",
+          "50": "Items: 50",
+          "100": "Items: 100"
+        }
+      },
+      "loading": {
+        "message": "Loading resource packs..."
+      },
+      "empty": {
+        "noResourcePacksFound": "No resource packs found",
+        "tryAdjustingFilters": "Try adjusting your search or filters"
+      },
+      "cards": {
+        "byAuthor": "By {author}",
+        "downloads": "Downloads"
+      },
+      "errors": {
+        "failedToLoadResourcePacks": "Failed to load resource packs:",
+        "failedToLoadCategories": "Failed to load resource pack categories:"
+      }
+    },
+    "shaders": {
+      "title": "Shaders",
+      "searchPlaceholder": "Search shaders...",
+      "filters": {
+        "categories": {
+          "all": "All Categories"
+        },
+        "sort": {
+          "newest": "Sort: Newest",
+          "relevance": "Relevance",
+          "downloads": "Downloads",
+          "updated": "Recently Updated"
+        },
+        "itemCount": {
+          "10": "Items: 10",
+          "20": "Items: 20",
+          "50": "Items: 50",
+          "100": "Items: 100"
+        }
+      },
+      "loading": {
+        "message": "Loading shaders..."
+      },
+      "empty": {
+        "noShadersFound": "No shaders found",
+        "tryAdjustingFilters": "Try adjusting your search or filters"
+      },
+      "cards": {
+        "byAuthor": "By {author}",
+        "downloads": "Downloads"
+      },
+      "errors": {
+        "failedToLoadShaders": "Failed to load shaders:",
+        "failedToLoadCategories": "Failed to load shader categories:"
+      }
+    },
+    "mods": {
+      "title": "Mods",
+      "searchPlaceholder": "Search mods...",
+      "filters": {
+        "loaders": {
+          "all": "All Loaders",
+          "forge": "Forge",
+          "fabric": "Fabric",
+          "quilt": "Quilt",
+          "neoforge": "NeoForge"
+        },
+        "environment": {
+          "all": "Environment: All",
+          "client": "Client",
+          "server": "Server"
+        },
+        "sort": {
+          "relevance": "Sort: Relevance",
+          "downloads": "Downloads",
+          "follows": "Follows",
+          "newest": "Newest",
+          "updated": "Recently Updated"
+        },
+        "categories": {
+          "all": "All Categories"
+        },
+        "gameVersions": {
+          "all": "All Versions"
+        }
+      },
+      "loading": {
+        "message": "Loading mods..."
+      },
+      "empty": {
+        "noModsFound": "No mods found",
+        "tryAdjustingFilters": "Try adjusting your search or filters"
+      },
+      "cards": {
+        "byAuthor": "By {author}",
+        "downloads": "Downloads"
+      },
+      "errors": {
+        "failedToLoadMods": "Failed to load mods:",
+        "failedToLoadGameVersions": "Failed to load game versions:",
+        "failedToLoadCategories": "Failed to load categories:"
+      }
+    },
+    "accountmanager": {
+
+    },
+    "instancecreator": {
+      "title": "Create New Instance",
+      "steps": {
+        "basicInfo": "Basic Info",
+        "gameConfiguration": "Game Configuration",
+        "overview": "Overview"
+      },
+      "step1": {
+        "description": "Give your new instance a name and description to easily identify it. You can also upload a custom icon to make it stand out in your library.",
+        "iconLabel": "Icon (Optional)",
+        "noIconSelected": "No icon selected",
+        "instanceNameLabel": "Instance Name *",
+        "instanceNamePlaceholder": "My Epic Minecraft",
+        "descriptionLabel": "Description",
+        "descriptionPlaceholder": "Optional description for this instance"
+      },
+      "step2": {
+        "description": "Configure your Minecraft version, mod loader, and memory allocation. These settings determine which mods you can install and how your instance performs.",
+        "gameConfigurationGroup": "Game Configuration",
+        "loaderTypeLabel": "Loader Type",
+        "gameVersionLabel": "Game Version",
+        "loaderVersionLabel": "Loader Version (Optional)",
+        "memoryAllocationGroup": "Memory Allocation",
+        "minimumRamLabel": "Minimum RAM",
+        "maximumRamLabel": "Maximum RAM",
+        "javaConfigurationGroup": "Java Configuration",
+        "javaPathLabel": "Custom Java Path (Optional)",
+        "javaPathPlaceholder": "Leave empty to use default Java",
+        "javaArgsLabel": "Java Arguments (Optional)",
+        "javaArgsPlaceholder": "-XX:+UseG1GC -XX:+UnlockExperimentalVMOptions"
+      },
+      "step3": {
+        "description": "Review your instance configuration before creating it. You can go back to make changes if needed.",
+        "basicInformationGroup": "Basic Information",
+        "nameLabel": "Name:",
+        "descriptionLabel": "Description:",
+        "iconLabel": "Icon:",
+        "customIconSet": "Custom icon set",
+        "defaultIcon": "Default icon",
+        "gameConfigurationGroup": "Game Configuration",
+        "gameVersionLabel": "Game Version:",
+        "modLoaderLabel": "Mod Loader:",
+        "loaderVersionLabel": "Loader Version:",
+        "memoryLabel": "Memory:",
+        "javaConfigurationGroup": "Java Configuration",
+        "customJavaPathLabel": "Custom Java Path:",
+        "javaArgsLabel": "Java Arguments:",
+        "notSet": "Not set"
+      },
+      "buttons": {
+        "cancel": "Cancel",
+        "previous": "Previous",
+        "next": "Next",
+        "createInstance": "Create Instance"
+      },
+      "errors": {
+        "instanceNameRequired": "Instance name is required"
+      },
+      "loaders": {
+        "vanilla": "Vanilla",
+        "forge": "Forge",
+        "neoforge": "NeoForge",
+        "fabric": "Fabric",
+        "quilt": "Quilt"
+      },
+      "versionSuffix": {
+        "recommended": " (Recommended)"
+      }
+    },
+    "instanceSettings": {
+      "title": "{name} Settings",
+      "basicInfo": {
+        "instanceName": "Instance Name",
+        "description": "Description",
+        "descriptionPlaceholder": "Optional description for this instance"
+      },
+      "gameInfo": {
+        "gameVersion": "Game Version",
+        "loaderType": "Loader Type",
+        "loaderVersion": "Loader Version (Optional)",
+        "loadingVersions": "Loading versions..."
+      },
+      "memoryAllocation": {
+        "label": "Memory Allocation",
+        "minimumRam": "Minimum RAM",
+        "maximumRam": "Maximum RAM"
+      },
+      "javaConfiguration": {
+        "javaPath": "Java Path (Optional)",
+        "javaPathPlaceholder": "Auto-detected Java path",
+        "jvmArgs": "JVM Arguments",
+        "jvmArgsPlaceholder": "-XX:+UseG1GC -XX:+UnlockExperimentalVMOptions",
+        "gameArgs": "Game Arguments",
+        "gameArgsPlaceholder": "--fullscreen --server example.com"
+      },
+      "buttons": {
+        "cancel": "Cancel",
+        "saveChanges": "Save Changes"
+      },
+      "toasts": {
+        "settingsSavedSuccessfully": "Settings saved successfully",
+        "failedToSaveSettings": "Failed to save settings"
+      }
+    },
+    "instanceBrowser": {
+      "searchPlaceholder": "Search...",
+      "filters": {
+        "loaders": {
+          "all": "All Loaders",
+          "forge": "Forge",
+          "fabric": "Fabric",
+          "quilt": "Quilt",
+          "neoforge": "NeoForge"
+        },
+        "environment": {
+          "all": "Environment: All",
+          "client": "Client",
+          "server": "Server"
+        },
+        "sort": {
+          "relevance": "Sort: Relevance",
+          "downloads": "Downloads",
+          "follows": "Follows",
+          "updated": "Recently Updated",
+          "newest": "Newest"
+        },
+        "itemCount": {
+          "10": "Items: 10",
+          "20": "Items: 20",
+          "30": "Items: 30",
+          "50": "Items: 50"
+        }
+      },
+      "actions": {
+        "add": "Add",
+        "adding": "Adding...",
+        "remove": "Remove",
+        "installed": "Installed"
+      },
+      "dependencies": {
+        "toggle": "{count} {count, plural, one {dependency} other {dependencies}}",
+        "requiredCount": "({count} required)",
+        "required": "Required",
+        "optional": "Optional",
+        "unknownMod": "Unknown mod",
+        "loading": "Loading..."
+      },
+      "empty": {
+        "noItemsFound": "No items found",
+        "tryAdjustingFilters": "Try adjusting your search or filters"
+      }
+    },
+    "modals": {
+      "itemViewerModal": {
+        "modLabel": "Install Mod",
+        "resourcePackLabel": "Install Resource Pack",
+        "shaderLabel": "Install Shader",
+        "itemLabel": "Install Item",
+        "author": "By {author}",
+        "downloads": "Downloads",
+        "latestVersion": "Latest Version",
+        "gameVersions": "Game Versions",
+        "loaders": "Loaders",
+        "updated": "Updated",
+        "unknown": "Unknown",
+        "selectInstance": "Select Instance",
+        "compatibleInstancesCount": "Showing {count} compatible instance(s) for this {itemType}.",
+        "alreadyInstalledWarning": "This {itemType} is already installed for the selected instance.",
+        "noInstancesFound": "No instances found. Please create an instance first.",
+        "createInstance": "Create Instance",
+        "noCompatibleInstances": "No compatible instances found for this {itemType}.",
+        "gameVersionLabel": "Game version",
+        "createCompatibleInstance": "Create Compatible Instance",
+        "selectInstancePlaceholder": "Select an instance...",
+        "installing": "Installing...",
+        "alreadyInstalled": "Already installed",
+        "installToSelectedInstance": "Install to Selected Instance",
+        "noDescriptionAvailable": "No description available",
+        "toasts": {
+          "pleaseSelectInstance": "Please select an instance",
+          "alreadyInstalledInfo": "This {itemType} is already installed for the selected instance",
+          "installedSuccessfully": "{itemType} installed successfully to \"{instanceName}\"",
+          "failedToInstall": "Failed to install {itemType}",
+          "noCompatibleVersionFound": "No compatible version found for this {itemType}",
+          "instanceNameRequired": "Instance name is required",
+          "failedToCreateInstance": "Failed to create instance"
+        }
+      }
+    }
+  },
+  "components": {
+    "customSelect": {
+        "selectPlaceholder": "Select an option",
+        "noOptions": "No options available"
+    }
+  },
+  
+  "sidebar": {
+    "buttons": {
+      "play": "Play",
+      "home": "Home",
+      "accountManager": "Account Manager",
+      "instances": "Instances",
+      "mods": "Mods",
+      "quickServers": "Quick Servers",
+      "discover": "Discover",
+      "shaders": "Shaders",
+      "resourcePacks": "Resource Packs",
+      "settings": "Settings",
+      "whatsnew": "What's new",
+      "changelogs": "ChangeLogs",
+      "docs": "Docs",
+      "about": "About"
+    },
+    "settings": "Settings"
+  },
+  "header": {
+    "runningInstances": "Running Instances",
+    "breadcrumbs": {
+      "resourcePacks": "Resource Packs",
+      "addAccount": "Add Account",
+      "createInstance": "Create Instance",
+      "shaders": "Shaders",
+      "mods": "Mods",
+      "home": "Home",
+      "discover": "Discover",
+      "instances": "Instances"
+    },
+    "buttons": {
+      "console": "Console",
+      "minimize": "Minimize",
+      "maximize": "Maximize",
+      "restore": "Restore",
+      "close": "Close",
+      "about": "About",
+      "settings": "Settings",
+      "donate":"Buy me a coffee"
+    },
+    "instanceRunTime":{
+      "noInstancesRunning": "No running instances",
+      "runningInstances": "running instance"
+    }
+  },
+  "homePage": {
+    "welcomeBanner": {
+      "greeting": "Hello!",
+      "title": "Welcome to OriLauncher"
+    },
+    "buttons": {
+      "createInstance": "Create instance",
+      "seeAll": "See All",
+      "play": "Play",
+      "cancel": "Cancel",
+      "viewMore": "View More"
+    },
+    "launchStatus": {
+      "preparing": "Preparing...",
+      "downloading": "Downloading...",
+      "extracting": "Extracting...",
+      "verifying": "Verifying...",
+      "running": "Running",
+      "launching": "Launching..."
+    },
+    "sections": {
+      "recentlyAdded": "Recently Added",
+      "popularMods": "Popular Mods",
+      "noPopularMods": "No popular mods",
+      "noPopularModsDescription": "Unable to load popular mods at this time."
+    }
+  },
+  "discover": {
+    "title": "Discover",
+    "searchPlaceholder": "Search...",
+    "sections": {
+      "trendingMods": "Trending Mods",
+      "loadingTrendingMods": "Loading trending mods...",
+      "noTrendingMods": "No trending mods found",
+      "popularResourcePacks": "Popular Resource Packs",
+      "loadingResourcePacks": "Loading resource packs...",
+      "noResourcePacks": "No resource packs found",
+      "shaders": "Shaders",
+      "loadingShaders": "Loading shaders...",
+      "noShaders": "No shaders found",
+      "recentlyUpdated": "Recently Updated",
+      "loadingRecentlyUpdated": "Loading recently updated...",
+      "noRecentlyUpdated": "No recently updated items found",
+      "noResultsFound": "No results found"
+    },
+    "buttons": {
+      "viewMore": "View More"
+    }
+  },
+  "instances": {
+    "contextMenu": {
+      "delete": "Delete"
+    },
+    "tabs": {
+      "overview": "Overview",
+      "mods": "Mods",
+      "resourcePacks": "Resource Packs",
+      "shaders": "Shaders"
+    },
+    "tooltips": {
+      "cancel": "Cancel"
+    }
+  },
+  "mods": {
+    "filters": {
+      "loaders": {
+        "all": "All Loaders",
+        "forge": "Forge",
+        "fabric": "Fabric",
+        "quilt": "Quilt",
+        "neoforge": "NeoForge"
+      },
+      "environment": {
+        "all": "Environment: All",
+        "client": "Client",
+        "server": "Server"
+      },
+      "sort": {
+        "relevance": "Sort: Relevance",
+        "downloads": "Downloads",
+        "follows": "Follows",
+        "newest": "Newest",
+        "recentlyUpdated": "Recently Updated"
+      }
+    },
+    "errors": {
+      "failedToLoad": "Failed to load mods:"
+    }
+  },
+  "stepInstanceCreator": {
+    "loaders": {
+      "vanilla": "Vanilla",
+      "forge": "Forge",
+      "neoforge": "NeoForge",
+      "fabric": "Fabric",
+      "quilt": "Quilt"
+    },
+    "versionSuffix": {
+      "recommended": " (Recommended)"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "previous": "Previous"
+    }
+  },
+  "card": {
+    "lastPlayed": {
+      "neverPlayed": "Never Played",
+      "justNow": "Just now",
+      "minutesAgo": "{minutes}m ago",
+      "hoursAgo": "{hours}h ago",
+      "daysAgo": "{days}d ago",
+      "weeksAgo": "{weeks}w ago"
+    }
+  },
+  "avatarCard": {
+    "accountType": {
+      "minecraft": "Minecraft account",
+      "offline": "Offline account"
+    },
+    "manageAccount": "Manage account",
+    "fallback": {
+      "selectAccount": "Select Account",
+      "noAccountSelected": "No account selected"
+    }
+  },
+  "accountAdder": {
+    "selectAccountType": "Select Account Type",
+    "close": "Close",
+    "addMinecraftAccount": "Microsoft Account",
+    "addMinecraftAccountDescription": "Add your official Minecraft account to play online. (Requires a valid Mojang or Microsoft account.)",
+    "addOfflineAccount": "Offline Account",
+    "addOfflineAccountDescription": "Play on unofficial or cracked servers without a Minecraft account. (Progress and skins will not sync across devices.)",
+    "addingAccount": "Adding Account...",
+    "addingAccountDescription": "Please wait while we authenticate your account...",
+    "offlineAccountForm": {
+      "enterUsername": "Enter a username to create an offline Minecraft account. This account will only work on unofficial servers.",
+      "usernamePlaceholder": "Enter username (3-16 characters, a-z, 0-9, _)",
+      "usernameRequired": "Username is required",
+      "usernameTooShort": "Username must be at least 3 characters long",
+      "usernameTooLong": "Username must be 16 characters or less",
+      "usernameInvalidCharacters": "Username can only contain letters, numbers, and underscores",
+      "cancel": "Cancel",
+      "save": "Save",
+      "saving": "Saving..."
+    },
+    "accountAdded": "Account added!",
+    "failedToAddAccount": "Failed to add account. Please try again."
+  },
+  "dialog": {
+    "defaultTitle": "Dialog Title",
+    "defaultMessage": "Dialog message goes here.",
+    "ok": "OK",
+    "no": "No",
+    "nevermind": "Nevermind",
+    "yes": "Yes",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "confirm": "Confirm",
+    "retry": "Retry",
+    "titles": {
+      "deleteAccount": "Remove Account?",
+      "apiError": "API Error",
+      "apiUnreachable": "API Unreachable",
+      "selectFolder": "Select a Folder",
+      "gamePreparing": "Game is preparing to launch.",
+      "gameRunning": "Another instance is already running.",
+      "addMinecraftAccount": "Add Minecraft Account",
+      "saveSkin": "Save Skin"
+    },
+    "messages": {
+      "deleteAccount": "Are you sure you want to remove this account?",
+      "apiError": "An error occurred while connecting to the API. Please try again later.",
+      "apiUnreachable": "The API server is unreachable. Please check your internet connection and try again.",
+      "gamePreparingCancelMessage": "An instance is currently being prepared for launch. You must cancel the current launch process before selecting a different instance. Would you like to cancel the launch?",
+      "gameRunningCancelMessage": "An instance is currently running. You must close the game before selecting a different instance. Would you like to close the game?"
+    },
+    "fileTypes": {
+      "pngImages": "PNG Images",
+      "allFiles": "All Files"
+    }
+  },
+  "splash": {
+    "loading": "Loading...",
+    "description": "Please wait while the process completes.",
+    "closeNote": "You can close the active window to stop this process"
+  },
+  "toast": {
+    "defaultMessage": "Something just happened!",
+    "launchError": "Something went wrong while launching the game. Please try again later.",
+    "noSkinAvailable": "No skin available to download",
+    "skinSaved": "Skin saved successfully!",
+    "skinSaveFailed": "Failed to save skin"
+  },
+  "accountManager": {
+    "title": "Account Manager",
+    "description": "Manage your Minecraft accounts here. Switch between profiles and remove accounts to personalize your play experience.",
+    "deleteAccountTitle": "Remove Account?",
+    "deleteAccountMessage": "Are you sure you want to remove this account?",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "removeAccount": "Remove account",
+    "removeAccountAriaLabel": "Remove account",
+    "accountRefreshedSuccessfully": "Account refreshed successfully",
+    "accountRefreshFailed": "Failed to refresh account",
+    "refreshAccount": "Refresh account",
+    "minecraft": "Minecraft",
+    "cracked": "Cracked",
+    "playtime": "Playtime"
+  },
+  "versionSelector": {
+    "minecraftVersion": "Minecraft",
+    "versionSummary": "Select your preferred Minecraft version and variant.",
+    "closeButton": "Close Button",
+    "closeButtonAriaLabel": "Close Button"
+  },
+  "console": {
+    "clearLogs": "Clear",
+    "welcome": "Welcome to Ori Launcher Console",
+    "description": "This console will display launcher activities and game logs",
+    "ready": "Console ready for use",
+    "levels": {
+      "debug": "Debug (All)",
+      "info": "Info",
+      "warning": "Warning",
+      "error": "Error"
+    },
+    "loggerTestMessage": "Logger test message",
+    "levelChanged": "Level changed to {level}",
+    "somethingWentWrong": "Something went wrong"
+  },
+  "customOptions": {
+    "selectPlaceholder": "Select",
+    "levels": {
+      "debug": "Debug (All)",
+      "info": "Info",
+      "warning": "Warning",
+      "error": "Error"
+    },
+    "clear": "Clear"
+  },
+  "instanceManager":{
+    "title": "Instance Manager",
+    "home": "Home",
+    "description": "Manage your Minecraft instances here. Create, edit, and delete instances to personalize your play experience.",
+    "createInstance": "Create Instance",
+    "createInstanceAriaLabel": "Create Instance",
+    "editInstance": "Edit Instance",
+    "editInstanceAriaLabel": "Edit Instance",
+    "deleteInstance": "Delete Instance",
+    "deleteInstanceAriaLabel": "Delete Instance",
+    "instanceName": "Instance Name",
+    "instanceNamePlaceholder": "Enter instance name",
+    "instanceNameRequired": "Instance name is required",
+    "instanceNameTooShort": "Instance name must be at least 3 characters long",
+    "instanceNameTooLong": "Instance name must be 16 characters or less",
+    "instanceNameInvalidCharacters": "Instance name can only contain letters, numbers, and underscores",
+    "cancel": "Cancel",
+    "save": "Save",
+    "version": {
+      "label": "Available version",
+      "description": "Select the version of Minecraft to use for this instance.",
+      "versionTypes": {
+        "vanilla": {
+          "name": "Vanilla",
+          "description": "Experience vanilla Minecraft with enhanced performance, and exciting new features. Play the pure, unmodified version of the game as intended by Mojang."
+        },
+        "forge": {
+          "name": "Forge",
+          "description": "Play with Forge mods for enhanced gameplay, new items, blocks, and mechanics. Access thousands of community-created modifications to transform your Minecraft experience."
+        },
+        "fabric": {
+          "name": "Fabric",
+          "description": "Experience lightweight and fast modding with Fabric. Enjoy performance optimizations, modern mods, and quick updates to the latest Minecraft versions."
+        }
+      }
+    }
+  },
+  "folderPicker": {
+    "browse": "Browse",
+    "pick": "Select Folder",
+    "noFolderSelected": "No folder selected"
+  },
+  "skinViewer": {
+    "defaultUsername": "MHF_Steve",
+    "animations": {
+      "idle": "Idle",
+      "walking": "Walking",
+      "running": "Running",
+      "crouch": "Crouch",
+      "waving": "Waving"
+    },
+    "viewModes": {
+      "2d": "2D View",
+      "3d": "3D View"
+    },
+    "playPause": "Play/Pause",
+    "saveSkin": "Save skin",
+    "toggleView": "Toggle 2D/3D View",
+    "playAnimation": "play-animation",
+    "saveSkinAriaLabel": "save-skin",
+    "noSkinAvailable": "No skin available to download",
+    "skinSavedSuccessfully": "Skin saved successfully!",
+    "failedToSaveSkin": "Failed to save skin"
+  },
+  "logs": {
+    "languageSet": "Language set to: {language}",
+    "discordRPCEnabled": "Discord RPC enabled.",
+    "notificationSoundsEnabled": "Notification sounds enabled.",
+    "loadingSettings": "Loading settings...",
+    "buildingVersions": "Building versions...",
+    "checkingForUpdates": "Checking for updates...",
+    "downloadingUpdate": "Downloading update",
+    "updateDownloaded": "Update downloaded successfully",
+    "updateExtracted": "Update extracted and ready to install",
+    "updateReadyToInstall": "Update installed successfully",
+    "updateReadyMessage": "A new update has been installed and will take effect after restart. Please restart the launcher to apply the changes.",
+    "restartNow": "Restart Now",
+    "restartLater": "Restart Later",
+    "skippingUpdateCheck": "Skipping update check...",
+    "initializingServices": "Initializing services...",
+    "refreshingAccounts": "Refreshing accounts...",
+    "accountsValidated": "Accounts validated",
+    "fetchingServerList": "Fetching server list...",
+    "preparingLauncher": "Preparing launcher...",
+    "checkingAPIStatus": "Checking API status...",
+    "apiFetch": {
+      "wakingUpServer": "Waking up API server...",
+      "wakeup1": "Poking the server with a stick to wake it up...",
+      "wakeup2": "Politely asking the server to rise and shine...",
+      "wakeup3": "Bribing the server with virtual coffee...",
+      "wakeup4": "Sending a wake-up call to the server...",
+      "wakeup5": "Whispering 'good morning' to the server...",
+      "wakeup6": "Tickling the server's circuits...",
+      "wakeup7": "Playing loud music to get the server moving..."
+    },
+    "debugger":{
+      "addingEventListeners": "[MAIN CONTENT] Adding new event listeners",
+      "eventSetupComplete": "[MAIN CONTENT] Event setup complete. Total cleanup functions"
+    },
+    "apiUnreachable": "API unreachable. Some features might not work properly.",
+    "ready": "Ready!"
+  },
+  "connection": {
+    "connectionLost": "Connection lost!",
+    "connectionRestored": "Connection restored"
+  },
+  "tray": {
+    "oriLauncher": "Ori Launcher",
+    "retrieve": "Retrieve",
+    "checkForUpdates": "Check for Updates",
+    "quit": "Quit",
+    "tooltip": "Ori Launcher"
+  },
+  "discordRPC": {
+    "inLauncher": "In Launcher",
+    "browsing": "Browsing",
+    "idle": "Idle",
+    "minecraft": "Minecraft",
+    "downloading": "Downloading",
+    "downloadOriLauncher": "Download Ori Launcher"
+  },
+  "notifications": {
+    "updateAvailable": "Update Available",
+    "updateAvailableMessage": "A new version of Ori Launcher is available!",
+    "updateNow": "Update Now",
+    "later": "Later",
+    "gameLaunched": "Game Launched",
+    "gameLaunchedMessage": "Minecraft started successfully!",
+    "launchFailed": "Launch Failed",
+    "launchFailedMessage": "Failed to start Minecraft, please try again later.",
+    "downloadComplete": "Download Complete",
+    "downloadCompleteMessage": "Download completed successfully!",
+    "connectionLost": "Connection Lost",
+    "connectionLostMessage": "Lost connection to servers. Retrying...",
+    "connectionRestored": "Connection Restored",
+    "connectionRestoredMessage": "Connection restored. You can now play Minecraft again.",
+    "launcherRestartRequired": "Launcher restart required",
+    "launcherRestartRequiredMessage": "A restart of the launcher is required for the changes to take effect."
+  },
+  "errors": {
+    "noAccountSelected": "No account selected",
+    "invalidOnlineCredentials": "Invalid online account credentials",
+    "noVersionSelected": "No Minecraft version selected",
+    "noMinecraftDirectory": "Minecraft directory not specified",
+    "memoryConfiguration": "Minimum memory must be less than maximum memory",
+    "memoryExceedsSystem": "Maximum memory exceeds system memory",
+    "launchInProgress": "Launch already in progress",
+    "accountRefreshFailed": "Failed to refresh account after retry",
+    "apiNotReachable": "Failed to fetch news"
+  },
+  "stores": {
+    "instances": {
+      "errors": {
+        "failedToLoadInstances": "Failed to load instances",
+        "failedToCreateInDatabase": "Failed to create instance in database",
+        "failedToCreate": "Failed to create instance",
+        "failedToUpdate": "Failed to update instance",
+        "updateSuccess": "Instance updated successfully",
+        "noCompatibleVersion": "No compatible version found for this mod",
+        "invalidVersionData": "Invalid or missing version data - no files found",
+        "noDownloadFiles": "No download files found for this version",
+        "noDependenciesInstalled": "No dependencies were installed (they may already be installed or be optional)",
+        "failedToInstallMod": "Failed to install mod",
+        "failedToRemoveMod": "Failed to remove mod",
+        "failedToEnableMod": "Failed to enable mod",
+        "failedToLoadMods": "Failed to load mods",
+        "failedToGetMods": "Failed to get mods",
+        "failedToGetResourcePacks": "Failed to get resource packs",
+        "failedToAddResourcePack": "Failed to add resource pack",
+        "failedToRemoveResourcePack": "Failed to remove resource pack",
+        "failedToEnableResourcePack": "Failed to enable resource pack",
+        "failedToLoadResourcePacks": "Failed to load resource packs",
+        "failedToGetShaders": "Failed to get shaders",
+        "failedToAddShader": "Failed to add shader",
+        "failedToRemoveShader": "Failed to remove shader",
+        "failedToEnableShader": "Failed to enable shader",
+        "failedToLoadShaders": "Failed to load shaders",
+        "failedToSyncInstanceContent": "Failed to sync instance content",
+        "modFromFileSystem": "Mod from filesystem",
+        "resourcePackFromFileSystem": "Resource pack from filesystem",
+        "shaderFromFileSystem": "Shader from filesystem"
+      }
+    },
+    "launch": {
+      "status": {
+        "readyToLaunch": "Ready to launch",
+        "gameRunning": "Game is running"
+      }
+    }
+  },
+  "bootUpManager": {
+    "update": {
+      "restartRequired": "Please restart the launcher manually to complete the update.",
+      "upToDate": "Launcher is up to date"
+    },
+    "accountRefresh": {
+      "failed": "Failed to refresh account"
+    },
+    "bootStatus": {
+      "skippingApiCheck": "Skipping api check for now....",
+      "wakingUp": "waking up",
+      "apiUnreachable": "API unreachable"
+    }
+  },
+  "applySettings": {
+    "logs": {
+      "languageSet": "Language set to: {language}",
+      "discordRPCEnabled": "Discord RPC enabled.",
+      "notificationSoundsEnabled": "Notification sounds enabled."
+    }
+  },
+  "ariaLabels": {
+    "minimizeApp": "minimize-app",
+    "closeApp": "close-app",
+    "changeVersion": "Change version",
+    "rssBtn": "rss-btn",
+    "patreon": "patreon",
+    "settings": "Settings"
+  },
+  "placeholders": {
+    "enterName": "Enter name here good sir..."
+  }
+}

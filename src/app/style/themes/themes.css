@@ -1,0 +1,215 @@
+/* 
+Theme variables for all themes 
+*/
+body[data-theme="dark"] {
+  --base-color: #18181a;
+
+  --surface-color: color-mix(in oklab, var(--base-color), white 8%);
+  --overlay-color: color-mix(in oklab, var(--base-color), white 10%);
+  --overlay-color-1: color-mix(in oklab, var(--base-color), white 15%);
+  --overlay-color-2: color-mix(in oklab, var(--base-color), white 20%);
+  --overlay-color-3: color-mix(in oklab, var(--base-color), white 30%);
+
+  --accent-color: #4242C9;
+  --accent-color-dark: color-mix(in oklab, var(--accent-color), black 10%);
+  --accent-color-light: color-mix(in oklab, var(--accent-color), white 10%);
+  --accent-color-overlay: #4242C920;
+  
+  --accent-color-secondary: #4A90E2;
+  --accent-color-secondary-dark: color-mix(in srgb, #4A90E2, black 40%);
+  --accent-color-secondary-light: #6BA3F0;
+
+  --text-color: color-mix(in srgb, white, transparent 30%);
+  --text-color-muted: color-mix(in oklab, var(--base-color), rgb(227, 255, 243) 60%);
+  --border-color: color-mix(in oklab, var(--base-color), rgb(255, 255, 255) 14%);
+  --warning-color: #f59e0b;
+  --warning-color-dark: color-mix(in srgb, #f59e0b, black 20%);
+}
+
+body[data-theme="light"] {
+  --base-color: #ffffff;
+
+  --surface-color: color-mix(in oklab, var(--base-color), black 10%);
+  --overlay-color: color-mix(in oklab, var(--base-color), black 20%);
+  --overlay-color-1: color-mix(in oklab, var(--base-color), black 25%);
+  --overlay-color-2: color-mix(in oklab, var(--base-color), black 30%);
+  --overlay-color-3: color-mix(in oklab, var(--base-color), black 40%);
+
+  --accent-color: #4242C9;
+  --accent-color-dark: color-mix(in oklab, var(--accent-color), black 10%);
+  --accent-color-light: color-mix(in oklab, var(--accent-color), white 10%);
+  --accent-color-overlay: #4242C920;
+
+  --accent-color-secondary: #4A90E2;
+  --accent-color-secondary-dark: color-mix(in srgb, #4A90E2, black 40%);
+  --accent-color-secondary-light: #6BA3F0;
+
+  --text-color: color-mix(in oklab, var(--base-color), black 80%);
+  --text-color-muted: color-mix(in oklab, var(--base-color), black 60%);
+
+  --border-color: color-mix(in oklab, var(--base-color), black 25%);
+  --shadow-color: color-mix(in srgb, black 50%, transparent 50%);
+  --warning-color: #f59e0b;
+  --warning-color-dark: color-mix(in srgb, #f59e0b, black 20%);
+}
+
+body[data-theme="peach-sherbet"] {
+  --base-color: #fff6f0;
+  --surface-color: color-mix(in oklab, var(--base-color), black 5%);
+  --overlay-color: color-mix(in oklab, var(--base-color), black 10%);
+  --overlay-color-1: color-mix(in oklab, var(--base-color), black 15%);
+  --overlay-color-2: color-mix(in oklab, var(--base-color), black 20%);
+  --overlay-color-3: color-mix(in oklab, var(--base-color), black 25%);
+
+  --accent-color: #FF8C69;
+  --accent-color-dark: color-mix(in oklab, var(--accent-color), black 10%);
+  --accent-color-light: color-mix(in oklab, var(--accent-color), white 10%);
+  --accent-color-overlay: #FF8C6920;
+
+  --accent-color-secondary: #FFA07A;
+  --accent-color-secondary-light: #FFB899;
+
+  --text-color: #332020;
+  --text-color-muted: #664a3a;
+  --border-color: color-mix(in oklab, var(--base-color), black 20%);
+  --warning-color: #f59e0b;
+  --warning-color-dark: color-mix(in srgb, #f59e0b, black 20%);
+}
+
+body[data-theme="under-the-sea"] {
+  --base-color: #08171f;
+  --surface-color: color-mix(in oklab, var(--base-color), white 10%);
+  --overlay-color: color-mix(in oklab, var(--base-color), white 15%);
+  --overlay-color-1: color-mix(in oklab, var(--base-color), white 20%);
+  --overlay-color-2: color-mix(in oklab, var(--base-color), white 30%);
+  --overlay-color-3: color-mix(in oklab, var(--base-color), white 40%);
+
+  --accent-color: #18C4C4;
+  --accent-color-dark: color-mix(in oklab, var(--accent-color), black 15%);
+  --accent-color-light: color-mix(in oklab, var(--accent-color), white 10%);
+  --accent-color-overlay: #18C4C420;
+
+  --accent-color-secondary: #009688;
+  --accent-color-secondary-light: #5EE8E8;
+
+  --text-color: #E8F9F9;
+  --text-color-muted: #9BC8C8;
+  --border-color: color-mix(in oklab, var(--base-color), white 20%);
+  --warning-color: #f59e0b;
+  --warning-color-dark: color-mix(in srgb, #f59e0b, black 20%);
+}
+
+body[data-theme="dusk-fall"] {
+  --base-color: #1e1627;
+  --surface-color: color-mix(in oklab, var(--base-color), white 10%);
+  --overlay-color: color-mix(in oklab, var(--base-color), white 15%);
+  --overlay-color-1: color-mix(in oklab, var(--base-color), white 20%);
+  --overlay-color-2: color-mix(in oklab, var(--base-color), white 30%);
+  --overlay-color-3: color-mix(in oklab, var(--base-color), white 40%);
+
+  --accent-color: #D77B48;
+  --accent-color-dark: color-mix(in oklab, var(--accent-color), black 15%);
+  --accent-color-light: color-mix(in oklab, var(--accent-color), white 10%);
+  --accent-color-overlay: #D77B4820;
+
+  --accent-color-secondary: #C97A47;
+  --accent-color-secondary-light: #FFB07C;
+
+  --text-color: #F7EAF2;
+  --text-color-muted: #BBA6C4;
+  --border-color: color-mix(in oklab, var(--base-color), white 20%);
+  --warning-color: #f59e0b;
+  --warning-color-dark: color-mix(in srgb, #f59e0b, black 20%);
+}
+
+body[data-theme="pretty-in-pink"] {
+  --base-color: #fff2f5;
+  --surface-color: color-mix(in oklab, var(--base-color), black 5%);
+  --overlay-color: color-mix(in oklab, var(--base-color), black 10%);
+  --overlay-color-1: color-mix(in oklab, var(--base-color), black 15%);
+  --overlay-color-2: color-mix(in oklab, var(--base-color), black 20%);
+  --overlay-color-3: color-mix(in oklab, var(--base-color), black 25%);
+
+  --accent-color: #FF4F8B;
+  --accent-color-dark: color-mix(in oklab, var(--accent-color), black 10%);
+  --accent-color-light: color-mix(in oklab, var(--accent-color), white 10%);
+  --accent-color-overlay: #FF4F8B20;
+
+  --accent-color-secondary: #FF6B9D;
+  --accent-color-secondary-light: #FFA3C1;
+
+  --text-color: #3a202c;
+  --text-color-muted: #704458;
+  --border-color: color-mix(in oklab, var(--base-color), black 15%);
+  --warning-color: #f59e0b;
+  --warning-color-dark: color-mix(in srgb, #f59e0b, black 20%);
+}
+
+body[data-theme="retro-revival"] {
+  --base-color: #141024;
+  --surface-color: color-mix(in oklab, var(--base-color), white 10%);
+  --overlay-color: color-mix(in oklab, var(--base-color), white 15%);
+  --overlay-color-1: color-mix(in oklab, var(--base-color), white 20%);
+  --overlay-color-2: color-mix(in oklab, var(--base-color), white 25%);
+  --overlay-color-3: color-mix(in oklab, var(--base-color), white 35%);
+
+  --accent-color: #B44CFF;
+  --accent-color-dark: color-mix(in oklab, var(--accent-color), black 15%);
+  --accent-color-light: color-mix(in oklab, var(--accent-color), white 10%);
+  --accent-color-overlay: #B44CFF20;
+
+  --accent-color-secondary: #9C5CFF;
+  --accent-color-secondary-light: #D187FF;
+
+  --text-color: #E7E4FF;
+  --text-color-muted: #A89CC4;
+  --border-color: color-mix(in oklab, var(--base-color), white 25%);
+  --warning-color: #f59e0b;
+  --warning-color-dark: color-mix(in srgb, #f59e0b, black 20%);
+}
+
+body[data-theme="l.olly.pop"] {
+  --base-color: #fdfaff;
+  --surface-color: color-mix(in oklab, var(--base-color), black 5%);
+  --overlay-color: color-mix(in oklab, var(--base-color), black 10%);
+  --overlay-color-1: color-mix(in oklab, var(--base-color), black 15%);
+  --overlay-color-2: color-mix(in oklab, var(--base-color), black 20%);
+  --overlay-color-3: color-mix(in oklab, var(--base-color), black 25%);
+
+  --accent-color: #FF74C6;
+  --accent-color-dark: color-mix(in oklab, var(--accent-color), black 10%);
+  --accent-color-light: color-mix(in oklab, var(--accent-color), white 10%);
+  --accent-color-overlay: #FF74C620;
+
+  --accent-color-secondary: #E65CAE;
+  --accent-color-secondary-light: #FFB3E0;
+
+  --text-color: #2b2233;
+  --text-color-muted: #6a5772;
+  --border-color: color-mix(in oklab, var(--base-color), black 15%);
+  --warning-color: #f59e0b;
+  --warning-color-dark: color-mix(in srgb, #f59e0b, black 20%);
+}
+
+body[data-theme="candy-cane"] {
+  --base-color: #fffafa;
+  --surface-color: color-mix(in oklab, var(--base-color), black 5%);
+  --overlay-color: color-mix(in oklab, var(--base-color), black 10%);
+  --overlay-color-1: color-mix(in oklab, var(--base-color), black 15%);
+  --overlay-color-2: color-mix(in oklab, var(--base-color), black 20%);
+  --overlay-color-3: color-mix(in oklab, var(--base-color), black 25%);
+
+  --accent-color: #E63946;
+  --accent-color-dark: color-mix(in oklab, var(--accent-color), black 10%);
+  --accent-color-light: color-mix(in oklab, var(--accent-color), white 10%);
+  --accent-color-overlay: #E6394620;
+
+  --accent-color-secondary: #CC2E3D;
+  --accent-color-secondary-light: #FF7B84;
+
+  --text-color: #231314;
+  --text-color-muted: #664444;
+  --border-color: color-mix(in oklab, var(--base-color), black 15%);
+  --warning-color: #f59e0b;
+  --warning-color-dark: color-mix(in srgb, #f59e0b, black 20%);
+}

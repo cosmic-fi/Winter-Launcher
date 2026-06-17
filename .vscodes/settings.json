@@ -1,0 +1,55 @@
+{
+  // --- Formatting ---
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // --- Prettier ---
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 100,
+  "prettier.tabWidth": 2,
+  "prettier.semi": true,
+  "prettier.trailingComma": "es5",
+
+  // --- File Explorer visibility ---
+  "files.exclude": {
+    "**/.git": false,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/out": true,
+    "**/.idea": true,
+    "**/.vscode": false,
+    "**/.turbo": true,
+    "**/.svelte-kit": true
+  },
+
+  // --- Hide from Search panel ---
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/out": true,
+    "**/.svelte-kit": true
+  },
+
+  // --- Ignore from file watchers (for performance) ---
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/dist/**": false,
+    "**/build/**": false,
+    "**/out/**": false,
+    "**/.svelte-kit/**": true
+  },
+
+  // --- Misc ---
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "none"
+}

@@ -1,0 +1,140 @@
+name: Build Application
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to release (e.g., v1.4.0). Defaults to package.json version.'
+        required: false
+        type: string
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Build application
+      run: node build.js --build=platform
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        RELEASE_TAG: ${{ github.event.inputs.tag }}
+        GIT_REF_NAME: ${{ github.ref_name }}
+    
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-${{ matrix.os }}
+        path: |
+          build/*.exe
+          build/*.dmg
+          build/*.AppImage
+          build/*.zip
+          build/*.blockmap
+        retention-days: 1
+
+  publish:
+    name: Create cross-repo release and upload assets
+    runs-on: ubuntu-latest
+    needs: build
+    env:
+      GH_TOKEN: ${{ secrets.PUBLIC_REPO_TOKEN }}
+      TARGET_REPO: ${{ secrets.PUBLIC_REPO }}
+    steps:
+      - name: Verify inputs/secrets
+        run: |
+          set -euo pipefail
+          if [ -z "${TARGET_REPO}" ]; then
+            echo "Missing PUBLIC_REPO secret (e.g., owner/repo)." >&2
+            exit 1
+          fi
+          if [ -z "${GH_TOKEN}" ]; then
+            echo "Missing PUBLIC_REPO_TOKEN secret (PAT with repo scope)." >&2
+            exit 1
+          fi
+
+      - name: Ensure jq is available
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y jq
+
+      - name: Determine release tag
+        id: tag
+        run: |
+          TAG_INPUT="${{ github.event.inputs.tag }}"
+          if [ -n "$TAG_INPUT" ]; then
+            echo "tag=$TAG_INPUT" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event_name }}" = "push" ] && [[ "${{ github.ref }}" == refs/tags/* ]]; then
+            echo "tag=${{ github.ref_name }}" >> $GITHUB_OUTPUT
+          else
+            # fallback to package.json version
+            VERSION=$(jq -r .version < package.json)
+            echo "tag=v${VERSION}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Checkout repository (for reading metadata)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Compute release notes
+        id: notes
+        shell: bash
+        run: |
+          set -euo pipefail
+          TAG="${{ steps.tag.outputs.tag }}"
+          NOTES=""
+          if git rev-parse "$TAG" >/dev/null 2>&1; then
+            NOTES=$(git for-each-ref refs/tags/$TAG --format '%(contents)')
+          fi
+          if [ -z "$NOTES" ]; then
+            # Fallback to most recent commit message
+            NOTES=$(git log -1 --pretty=%B || true)
+          fi
+          if [ -z "$NOTES" ]; then
+            NOTES="Release $TAG"
+          fi
+          echo "notes<<EOF" >> $GITHUB_OUTPUT
+          echo "$NOTES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Download all build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: release-assets
+          merge-multiple: true
+
+      - name: List assets
+        run: ls -lah release-assets || true
+
+      - name: Create draft release with assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          TAG="${{ steps.tag.outputs.tag }}"
+          TITLE="OriLauncher ${TAG}"
+          NOTES="${{ steps.notes.outputs.notes }}"
+          if gh release view "$TAG" --repo "$TARGET_REPO" >/dev/null 2>&1; then
+            echo "Release $TAG already exists in $TARGET_REPO and may be immutable. Use a new tag or delete the existing release."
+            exit 1
+          fi
+          PRERELEASE_FLAG=""
+          if [[ "$TAG" == *-* ]]; then PRERELEASE_FLAG="--prerelease"; fi
+          gh release create "$TAG" release-assets/* --repo "$TARGET_REPO" --title "$TITLE" --notes "$NOTES" $PRERELEASE_FLAG --draft

@@ -1,0 +1,61 @@
+{
+  "name": "winterlauncher",
+  "version": "1.0.0",
+  "description": "Modern Custom Minecraft launcher",
+  "author": {
+    "name": "Cosmic-fi (Cosmic Boucher)",
+    "email": "hello@cosmicfi.dev",
+    "url": "https://github.com/cosmic-fi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cosmic-fi/WinterLauncher"
+  },
+  "main": "src/electron/main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "build:ui": "vite build",
+    "build": "npm run build:ui",
+    "preview": "vite preview",
+    "dist": "node build.js --build=platform",
+    "dist:win": "node build.js --build=platform",
+    "dist:mac": "node build.js --build=platform",
+    "dist:linux": "node build.js --build=platform",
+    "dist:winstaller": "node build-winstaller.js",
+    "dist:all": "echo 'Use GitHub Actions for multi-platform builds'",
+    "release": "node build.js --build=platform",
+    "postinstall": "electron-builder install-app-deps",
+    "rebuild": "electron-builder install-app-deps && npm rebuild --runtime=electron --target=$(electron -v | sed 's/v//') --disturl=https://electronjs.org/headers --abi=$(electron --abi)"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^5.1.1",
+    "concurrently": "^9.2.0",
+    "electron": "^39.8.5",
+    "electron-builder": "^26.0.12",
+    "electron-winstaller": "^5.4.0",
+    "svelte": "^5.34.7",
+    "vite": "^6.3.5",
+    "wait-on": "^8.0.3"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.1.2",
+    "@lucide/svelte": "^0.562.0",
+    "axios": "^1.10.0",
+    "beam-ad-injector": "^1.0.6",
+    "cors": "^2.8.5",
+    "discord-rpc": "^4.0.1",
+    "dotenv": "^17.2.1",
+    "electron-log": "^5.4.3",
+    "electron-updater": "^6.4.4",
+    "http-proxy-agent": "^7.0.2",
+    "https-proxy-agent": "^7.0.6",
+    "material-icons": "^1.13.14",
+    "msmc": "^5.0.5",
+    "node-fetch": "^3.3.2",
+    "ori-mcc": "file:../Ori-MCC",
+    "skin3d": "^0.0.12",
+    "sqlite3": "^6.0.1",
+    "wintercore-mc": "^1.0.0"
+  }
+}

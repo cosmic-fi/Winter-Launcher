@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinterLauncher Console</title>
+    <!-- Theme CSS - will be copied during build -->
+    <link rel="stylesheet" href="../app/style/themes/themes.css">
+    <!-- Console-specific CSS -->
+    <link rel="stylesheet" href="console.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body data-theme="dark">
+    <div class="console-container">
+        <div class="console-header">
+            <h2>Game Console</h2>
+            <div class="console-controls">
+                <button id="clear-btn" class="control-btn" title="Clear Console">
+                    <i data-lucide="trash-2"></i>
+                </button>
+                <button id="filter-btn" class="control-btn" title="Filter Options">
+                    <i data-lucide="filter"></i>
+                </button>
+                <button id="export-btn" class="control-btn" title="Export Logs">
+                    <i data-lucide="download"></i>
+                </button>
+                <button id="auto-scroll-btn" class="control-btn active" title="Auto Scroll">
+                    <i data-lucide="arrow-down"></i>
+                </button>
+                <span class="seperator"></span>
+                <button id="close-btn" class="control-btn close-btn" title="Close Console">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="console-filter-bar" id="filter-bar" style="display: none;">
+            <select id="log-level-filter">
+                <option value="all">All Levels</option>
+                <option value="debug">Debug</option>
+                <option value="info">Info</option>
+                <option value="success">Success</option>
+                <option value="warning">Warning</option>
+                <option value="error">Error</option>
+            </select>
+            <input type="text" id="search-filter" placeholder="Search logs...">
+            <button id="close-filter" class="control-btn">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        
+        <div class="console-content" id="console-content">
+            <div class="console-logs" id="console-logs"></div>
+        </div>
+        
+        <div class="console-status-bar">
+            <span id="log-count">0 entries</span>
+            <span id="console-status">Ready</span>
+        </div>
+    </div>
+    <!-- Console JavaScript -->
+    <script src="console.js"></script>
+</body>
+</html>
