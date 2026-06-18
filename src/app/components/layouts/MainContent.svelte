@@ -219,10 +219,7 @@
         grid-area: content;
         height: 100%;
         background-color: color-mix(in srgb, var(--base-color), transparent 60%);
-        border: 2px solid var(--border-color);
-        border-left: none;
-        border-right: none;
-        border-bottom: none;
+        border-top: 2px solid var(--border-color);
         overflow: hidden;
 
         .single-container {

@@ -433,7 +433,7 @@
                 <!-- svelte-ignore a11y_consider_explicit_label -->
                 <button
                   class="btn btn-danger btn-sm"
-                  on:click={() => removeShader(sh)}
+                  on:click|stopPropagation={() => removeShader(sh)}
                 >
                   {$t(
                     "mainContent.instances.browsers.shaderBrowser.actions.remove",
@@ -443,7 +443,7 @@
                 <button
                   class="btn btn-accent btn-sm"
                   disabled={adding[sh.project_id || sh.slug || sh.id]}
-                  on:click={() => addShader(sh)}
+                  on:click|stopPropagation={() => addShader(sh)}
                 >
                   {#if adding[sh.project_id || sh.slug || sh.id]}
                     {$t(

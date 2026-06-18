@@ -225,7 +225,7 @@
 
   .account-manager-panel {
     background-color: var(--surface-color);
-    width: 750px;
+    width: 850px;
     height: 550px;
     overflow: hidden;
     display: flex;

@@ -1,14 +1,14 @@
 {
-  "common":{
+  "common": {
     "appName": "Winter Launcher",
     "grettings": {
       "hello": "Hello!",
-      "welcome":"Welcome to Winter Launcher"
+      "welcome": "Welcome to Winter Launcher"
     }
   },
   "settings": {
     "title": "Settings",
-    "tabs":{
+    "tabs": {
       "general": "General",
       "game": "Game",
       "mods": "Mods",
@@ -17,7 +17,7 @@
       "developer": "Developer",
       "about": "About"
     },
-    "general":{
+    "general": {
       "appearance": {
         "label": "Appearance",
         "theme": {
@@ -93,7 +93,7 @@
         "ignored": "Ignored Files",
         "ignoredDescription": "Specify files or directories to ignore when verifying game files."
       },
-      "display":{
+      "display": {
         "label": "Display",
         "resolution": "Resolution",
         "fullscreen": "Fullscreen",
@@ -214,7 +214,7 @@
     "minimize": "Minimize",
     "closeApp": "Close App",
     "selectAccount": "Select Account",
-    "noAccountSelected":"No account selected",
+    "noAccountSelected": "No account selected",
     "noAccounts": "No accounts added",
     "manageAccount": "Accounts",
     "addAccount": "Add Account",
@@ -335,24 +335,24 @@
         "popularMods": "Popular Mods",
         "noPopularMods": "No popular mods",
         "noPopularModsDescription": "Unable to load popular mods at this time.",
-        "author":"By {author}",
+        "author": "By {author}",
         "period": {
           "justNow": "Just now",
           "minutesAgo": "m ago",
           "hoursAgo": "h ago",
           "daysAgo": "d ago",
           "weeksAgo": "w ago",
-          "neverPlayed":"Never Played"
+          "neverPlayed": "Never Played"
         }
       },
       "alerts": {
-          "noAccountSelected": "No account selected",
-          "invalidOnlineCredentials": "Invalid online account credentials",
-          "noVersionSelected": "No Minecraft version selected",
-          "noMinecraftDirectory": "Minecraft directory not specified",
-          "memoryConfiguration": "Minimum memory must be less than maximum memory",
-          "memoryExceedsSystem": "Maximum memory exceeds system memory",
-          "launchInProgress": "Launch already in progress"
+        "noAccountSelected": "No account selected",
+        "invalidOnlineCredentials": "Invalid online account credentials",
+        "noVersionSelected": "No Minecraft version selected",
+        "noMinecraftDirectory": "Minecraft directory not specified",
+        "memoryConfiguration": "Minimum memory must be less than maximum memory",
+        "memoryExceedsSystem": "Maximum memory exceeds system memory",
+        "launchInProgress": "Launch already in progress"
       }
     },
     "instances": {
@@ -395,17 +395,17 @@
       },
       "mods": {
         "title": "Installed Mods",
-        "addMod": "Add Mod",
+        "addMod": "Add",
         "noModsInstalled": "No mods installed"
       },
       "resourcepacks": {
         "title": "Resource Packs",
-        "addResourcePack": "Add Resource Pack",
+        "addResourcePack": "Add",
         "noResourcePacksInstalled": "No resource packs installed"
       },
       "shaders": {
         "title": "Shaders",
-        "addShader": "Add Shader",
+        "addShader": "Add",
         "noShadersInstalled": "No Shaders installed"
       },
       "browsers": {
@@ -749,9 +749,7 @@
         "failedToLoadCategories": "Failed to load categories:"
       }
     },
-    "accountmanager": {
-
-    },
+    "accountmanager": {},
     "instancecreator": {
       "title": "Create New Instance",
       "steps": {
@@ -944,11 +942,11 @@
   },
   "components": {
     "customSelect": {
-        "selectPlaceholder": "Select an option",
-        "noOptions": "No options available"
+      "selectPlaceholder": "Select an option",
+      "noOptions": "No options available"
     }
   },
-  
+
   "sidebar": {
     "buttons": {
       "play": "Play",
@@ -957,7 +955,7 @@
       "instances": "Instances",
       "mods": "Mods",
       "quickServers": "Quick Servers",
-      "discover": "Discover",
+      "discover": "Explore",
       "shaders": "Shaders",
       "resourcePacks": "Resource Packs",
       "settings": "Settings",
@@ -988,9 +986,9 @@
       "close": "Close",
       "about": "About",
       "settings": "Settings",
-      "donate":"Buy me a coffee"
+      "donate": "Buy me a coffee"
     },
-    "instanceRunTime":{
+    "instanceRunTime": {
       "noInstancesRunning": "No running instances",
       "runningInstances": "running instance"
     }
@@ -998,7 +996,7 @@
   "homePage": {
     "welcomeBanner": {
       "greeting": "Hello!",
-      "title": "Welcome to OriLauncher"
+      "title": "Welcome to Winter Launcher"
     },
     "buttons": {
       "createInstance": "Create instance",
@@ -1213,7 +1211,7 @@
   },
   "console": {
     "clearLogs": "Clear",
-    "welcome": "Welcome to Ori Launcher Console",
+    "welcome": "Welcome to Winter Launcher Console",
     "description": "This console will display launcher activities and game logs",
     "ready": "Console ready for use",
     "levels": {
@@ -1236,7 +1234,7 @@
     },
     "clear": "Clear"
   },
-  "instanceManager":{
+  "instanceManager": {
     "title": "Instance Manager",
     "home": "Home",
     "description": "Manage your Minecraft instances here. Create, edit, and delete instances to personalize your play experience.",
@@ -1331,7 +1329,7 @@
       "wakeup6": "Tickling the server's circuits...",
       "wakeup7": "Playing loud music to get the server moving..."
     },
-    "debugger":{
+    "debugger": {
       "addingEventListeners": "[MAIN CONTENT] Adding new event listeners",
       "eventSetupComplete": "[MAIN CONTENT] Event setup complete. Total cleanup functions"
     },
@@ -1343,11 +1341,11 @@
     "connectionRestored": "Connection restored"
   },
   "tray": {
-    "oriLauncher": "Ori Launcher",
+    "winterlauncher": "Winter Launcher",
     "retrieve": "Retrieve",
     "checkForUpdates": "Check for Updates",
     "quit": "Quit",
-    "tooltip": "Ori Launcher"
+    "tooltip": "Winter Launcher"
   },
   "discordRPC": {
     "inLauncher": "In Launcher",
@@ -1355,11 +1353,11 @@
     "idle": "Idle",
     "minecraft": "Minecraft",
     "downloading": "Downloading",
-    "downloadOriLauncher": "Download Ori Launcher"
+    "downloadWinterLauncher": "Download Winter Launcher"
   },
   "notifications": {
     "updateAvailable": "Update Available",
-    "updateAvailableMessage": "A new version of Ori Launcher is available!",
+    "updateAvailableMessage": "A new version of Winter Launcher is available!",
     "updateNow": "Update Now",
     "later": "Later",
     "gameLaunched": "Game Launched",

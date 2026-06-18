@@ -3,7 +3,7 @@
 
   import { ChevronLeft, ChevronRight, X } from "@lucide/svelte";
   import { createEventDispatcher } from "svelte";
-  import { fade } from "svelte/transition";
+  import { fade, fly } from "svelte/transition";
 
     export let galleryItemIndex = null;
     export let galleryItem = null;
@@ -24,17 +24,14 @@
 </script>
 
 {#if open && galleryItem}
-    {console.log(open, galleryItem, galleryItemIndex, '----a-a-')}
-    
-
     <!-- svelte-ignore a11y_no_static_element_interactions -->
     <!-- svelte-ignore a11y_click_events_have_key_events -->
     <div 
         class="gallery-modal-container"
         on:click|self={close}
-        transition:fade
+        transition:fade={{ duration: 100 }}
     >
-        <div class="gallery-view-container">
+        <div class="gallery-view-container" transition:fly={{ y: 40, duration: 160, opacity: 0.9 }}>
             <div class="image-container">
                 <img src={galleryItem[galleryItemIndex]} alt={galleryItemIndex}>
             </div>

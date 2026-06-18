@@ -11,6 +11,7 @@
     import Loading from '../ui/Loading.svelte';
     import { Pause, Play, RefreshCcw, Save, Trash, MoreHorizontal } from '@lucide/svelte';
   import { image } from '../../utils/image.js';
+  import { fade } from 'svelte/transition';
 
     let canvas;
     let viewer = null;

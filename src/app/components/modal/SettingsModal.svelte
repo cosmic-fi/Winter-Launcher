@@ -11,12 +11,12 @@
   import { XIcon } from "@lucide/svelte";
   import { uiState } from "../../stores/ui";
   import { createEventDispatcher } from "svelte";
-  import { fade } from "svelte/transition";
+  import { fade, fly } from "svelte/transition";
 
   const { activeModal } = uiState;
 
   let currentTheme = "light";
-  let currentLang = "english";
+  let currentLang = "en";
 
   const dispatch = createEventDispatcher();
 
@@ -36,9 +36,9 @@
 
   $: langOptions = [
     { value: "en", label: $t("settings.general.appearance.language.languages.english") },
-    { value: "tr", label: $t("settings.general.appearance.language.languages.turkish") },
-    { value: "fr", label: $t("settings.general.appearance.language.languages.french") },
-    { value: "es", label: $t("settings.general.appearance.language.languages.spanish") },
+    // { value: "tr", label: $t("settings.general.appearance.language.languages.turkish") },
+    // { value: "fr", label: $t("settings.general.appearance.language.languages.french") },
+    // { value: "es", label: $t("settings.general.appearance.language.languages.spanish") },
   ];
   $: {
     if (
@@ -85,9 +85,9 @@
   onkeydown={(e) => {
       if (e.key === 'Escape') close();
   }}
-  transition:fade={{ duration: 120 }}
+  transition:fade={{ duration: 100 }}
   >
-  <div class="s-wrapper" onclick={(e) => e.stopPropagation()}>
+  <div class="s-wrapper" onclick={(e) => e.stopPropagation()} transition:fly={{ y: 40, duration: 160, opacity: 0.9 }}>
     <div class="settings-content">
       <div class="settings-header">
         <span class="header-title">
@@ -265,7 +265,7 @@
       flex-direction: column;
       overflow: hidden;
       border-bottom-width: 5px;
-      width: 650px;
+      width: 850px;
       height: 550px;
 
       .settings-content {

@@ -389,11 +389,11 @@
 {#if open && item}
   <!-- svelte-ignore a11y_click_events_have_key_events -->
   <!-- svelte-ignore a11y_no_static_element_interactions -->
-  <div class="modal-overlay" on:click|self={close} transition:fade={{ duration: 120 }}>
+  <div class="modal-overlay" on:click|self={close} transition:fade={{ duration: 100 }}>
     <div
       class="modal-content modal-large"
       on:click|stopPropagation
-      transition:fly={{ x: -40, duration: 160, opacity: 0.9 }}
+      transition:fly={{ y: 20, duration: 300, opacity: 0.9 }}
     >
       <div class="modal-header">
         <h2>{getItemTypeLabel()}</h2>
@@ -596,15 +596,15 @@
 <style>
   .modal-overlay {
     position: fixed;
-    height: 100%;
-    width: 100%;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     display: flex;
-    align-items: center;
     justify-content: center;
-    z-index: 900;
+    align-items: center;
+    z-index: 1000;
   }
   
   .modal-content {

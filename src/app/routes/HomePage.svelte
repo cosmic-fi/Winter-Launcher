@@ -1,6 +1,6 @@
 <script>
   //@ts-nocheck
-  import { onMount } from "svelte";
+  import { onMount, onDestroy } from "svelte";
   import { modsStore } from "../stores/mods";
   import { instanceStore, instancesRecentlyAdded } from "../stores/instances";
   import { uiState } from "../stores/ui";
@@ -72,22 +72,29 @@
     loading = false;
   });
 
-  modsStore.subscribe((store) => {
+  let unsubMods;
+
+  onDestroy(() => {
+    if (unsubMods) unsubMods();
+  });
+
+  unsubMods = modsStore.subscribe((store) => {
     popularMods = store.popular;
   });
 
-  instancesRecentlyAdded.subscribe((instances) => {
-    // Filter out running instances and get only the 4 most recently added
-    recentInstances = instances
-      .filter((instance) => {
-        // Check if instance is running by looking in the runningInstancesList
-        const isRunning = $runningInstancesList.some(
-          (item) => item.id === instance.id,
-        );
-        return !isRunning;
-      })
-      .slice(0, 4);
-  });
+  // Reactive: recompute when recently-added instances or running list changes
+  $: {
+    if ($instancesRecentlyAdded) {
+      recentInstances = $instancesRecentlyAdded
+        .filter((instance) => {
+          const isRunning = $runningInstancesList.some(
+            (item) => item.id === instance.id,
+          );
+          return !isRunning;
+        })
+        .slice(0, 4);
+    }
+  }
 
   function formatLastPlayed(dateString) {
     if (!dateString) return $t("mainContent.home.sections.period.neverPlayed");
@@ -244,7 +251,7 @@
               <span class="noupdates">No updates available</span>
             </div>
           {:else}
-            {#each updates as update}
+            {#each updates as update (update.url || update.title)}
               <!-- svelte-ignore a11y_click_events_have_key_events -->
               <!-- svelte-ignore a11y_no_static_element_interactions -->
               <div
@@ -275,7 +282,7 @@
               <span class="noupdates">No Events available</span>
             </div>
           {:else}
-            {#each events as event}
+            {#each events as event (event.url || event.title)}
               <!-- svelte-ignore a11y_click_events_have_key_events -->
               <!-- svelte-ignore a11y_no_static_element_interactions -->
               <div
@@ -323,10 +330,7 @@
   </div>
   <div class="section-group">
     <SectionHeader 
-        layoutStyle={instanceViewStyle}
         on:navigate={navigateToInstances}
-        on:setGridLayout={() => changeInstanceViewStyle('grid')}
-        on:setListLayout={() => changeInstanceViewStyle('list')}
     />
     <div class="section-content instances-grid">
       {#if loading}
@@ -337,7 +341,7 @@
           amount={recentInstances.length}
         />
       {:else}
-        {#each recentInstances as instance}
+        {#each recentInstances as instance (instance.id)}
           {@const instanceState = $instanceLaunchStates[instance.id] || {
             isLaunching: false,
             status: "ready",
@@ -421,10 +425,7 @@
 
   <div class="section-group">
     <SectionHeader 
-        layoutStyle={modViewStyle}
         on:navigate={navigateToMods}
-        on:setGridLayout={() => changeModViewStyle('grid')}
-        on:setListLayout={() => changeModViewStyle('list')}
     />
     <div class="mods-grid">
       {#if loading}
@@ -441,7 +442,7 @@
           <p>{$t("mainContent.home.sections.noPopularModsDescription")}</p>
         </div>
       {:else}
-        {#each popularMods as mod}
+        {#each popularMods as mod (mod.id || mod.title)}
           <Card
             variant="mod"
             title={mod.title}
@@ -463,15 +464,15 @@
       {/if}
     </div>
   </div>
-  {#if showItemViewerModal}
-    <ItemViewerModal
-      open={showItemViewerModal}
-      item={itemToView}
-      itemType={itemTypeToView}
-      on:close={closeItemViewerModal}
-    />
-  {/if}
 </div>
+{#if showItemViewerModal}
+  <ItemViewerModal
+    open={showItemViewerModal}
+    item={itemToView}
+    itemType={itemTypeToView}
+    on:close={closeItemViewerModal}
+  />
+{/if}
 
 <style>
   .homepage {
@@ -484,6 +485,7 @@
     padding-bottom: 2rem;
     row-gap: 10px;
     position: relative;
+    contain: paint;
 
     .welcome-banner-container {
       padding: 15px;

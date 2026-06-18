@@ -23,6 +23,7 @@
   import { fade } from 'svelte/transition';
   import { t } from '../stores/i18n';
   import Dialog from '../components/modal/Dialog.svelte';
+  import Preloader from '../components/ui/Preloader.svelte';
   
   const { activeModal } = uiState;
 
@@ -375,9 +376,7 @@
     </div>
 
     {#if $instancesLoading}
-      <div class="loading-container">
-        <div class="loading-spinner"></div>
-      </div>
+      <Preloader />
     {:else if $instancesError}
       <div class="error-message">
         <TriangleAlert size={16} />
@@ -424,9 +423,7 @@
       color-mix(in srgb, var(--surface-color), transparent 0%)
     ), url('{selectedInstance?.icon ? (selectedInstance.icon.startsWith('http') || selectedInstance.icon.startsWith('data:') ? selectedInstance.icon : `file://${selectedInstance.icon.replace(/\\/g, '/')}`) : './images/static/plain.jpeg'}');">
     {#if $instancesLoading}
-      <div class="loading-container">
-        <div class="loading-spinner"></div>
-      </div>
+      <Preloader />
     {:else if selectedInstance}
       <div class="details-header">
         <div class="header-info">
@@ -811,7 +808,7 @@
       text-overflow: ellipsis;
       top: calc(100%);
       font-size: .65rem;
-      padding-top: 3px;
+      padding-top: 0px;
       color: var(--text-color-muted);
       width: 100%;
       max-width: 100%;
@@ -843,30 +840,6 @@
     font-size: 1rem;
     font-weight: 600;
     color: var(--text-color);
-  }
-  
-  .loading-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    flex-grow: 1;
-    color: var(--text-color-muted);
-  }
-  
-  .loading-spinner {
-    width: 24px;
-    height: 24px;
-    border: 2px solid var(--border-color);
-    border-top: 2px solid var(--accent-color);
-    animation: spin 1s linear infinite;
-    margin-bottom: 0.5rem;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
   }
   
   .error-message {
@@ -1013,12 +986,13 @@
   }
   
   .details-header {
-    padding: 10px;
+    padding: 15px 10px;
     border-bottom: 1px solid var(--border-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: var(--text-color);
+
   }
   
   .header-info {

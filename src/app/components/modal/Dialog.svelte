@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import { fade, slide } from 'svelte/transition';
   import { t } from '../../stores/i18n';
 
@@ -23,7 +25,7 @@
   <!-- svelte-ignore a11y_click_events_have_key_events -->
   <!-- svelte-ignore a11y_no_static_element_interactions -->
   <div class="dialog-container" transition:fade={{ duration: 100 }} on:click|self={onClose}>
-    <div class="d-wrapper">
+    <div class="d-wrapper" transition:fly={{ y: 40, duration: 160, opacity: 0.9 }}> 
       <div class="dialog-header">{title}</div>
       <div class="d-title-description-container">
         <p class="d-description">
@@ -70,6 +72,7 @@
           font-size: var(--font-size-base);
           border-bottom: 2px solid var(--border-color);
           color: var(--text-color);
+          font-weight: 800;
         }
         .d-title-description-container{
             display: flex;

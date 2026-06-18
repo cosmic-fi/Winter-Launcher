@@ -347,12 +347,6 @@
     display: flex;
     flex-direction: column;
   }
-  .section-title {
-    gap: 5px;
-    display: flex;
-    font-weight: 500;
-    padding-block: 0.4rem;
-  }
   
   .shots-grid {
     display: grid;

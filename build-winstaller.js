@@ -38,12 +38,12 @@ async function buildInstaller() {
             appDirectory: path.join(rootPath, 'build/win-unpacked'),
             outputDirectory: outPath,
             authors: pkg.author.name || 'Cosmic-fi',
-            exe: 'OriLauncher.exe',
+            exe: 'Winter Launcher.exe',
             description: pkg.description,
             version: pkg.version,
             noMsi: true,
             setupIcon: path.join(rootPath, 'public/icon.ico'),
-            setupExe: `OriLauncher-Setup-${pkg.version}.exe`
+            setupExe: `Winter-Launcher-Setup-${pkg.version}.exe`
         });
 
         console.log(`Installer created successfully at ${outPath}`);

@@ -10,6 +10,7 @@
   import FolderPicker from '../ui/FolderPicker.svelte';
   import { fetchFabricLoaderVersions, fetchForgeLoaderVersions, fetchQuiltLoaderVersions, fetchNeoForgeLoaderVersions } from '../../services/api.js';
   import { t } from '../../stores/i18n.js';
+  import { fade, fly } from 'svelte/transition';
 
   export let open = false;
   export let instance = null;
@@ -211,8 +212,8 @@
 {#if open && instance}
   <!-- svelte-ignore a11y_click_events_have_key_events -->
   <!-- svelte-ignore a11y_no_static_element_interactions -->
-  <div class="modal-overlay" on:click|self={close}>
-    <div class="modal-content modal-large" on:click|stopPropagation>
+  <div class="modal-overlay" on:click|self={close} transition:fade={{ duration: 100 }}>
+    <div class="modal-content modal-large" on:click|stopPropagation transition:fly={{ y: 40, duration: 160, opacity: 0.9 }}>
       <div class="modal-header">
         <h3>{$t('mainContent.instanceSettings.title', { name: instance.name })}</h3>
         <button class="close-btn btn btn-default" on:click={close}>

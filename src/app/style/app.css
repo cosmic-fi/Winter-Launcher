@@ -150,12 +150,14 @@ body .btn:active:not(:disabled) {
   transform: translateY(0);
 }
 body .btn-primary {
-  background-color: var(--accent-color-dark) !important;
-  box-shadow: 0 0 0 2px var(--accent-color) !important;
+  background-color: var(--accent-color) !important;
+  box-shadow: 0 0 0 2px var(--accent-color-light) !important;
   color: #fff !important;
 }
 body .btn-primary:hover {
-  background-color: var(--accent-color) !important;
+  color: rgba(255, 255, 255, 0.5607843137) !important;
+  background-color: var(--accent-color-dark) !important;
+  box-shadow: 0 0 0 2px var(--accent-color) !important;
 }
 body .btn-default {
   background-color: var(--overlay-color-2) !important;

@@ -578,7 +578,7 @@
                 <!-- svelte-ignore a11y_consider_explicit_label -->
                 <button
                   class="btn btn-danger btn-sm"
-                  on:click={() =>
+                  on:click|stopPropagation={() =>
                     instanceStore.removeMod(
                       installedModMap.get(String(mod.project_id)),
                     )}
@@ -591,7 +591,7 @@
                 <button
                   class="btn btn-accent btn-sm"
                   disabled={adding[mod.project_id]}
-                  on:click={() => addMod(mod)}
+                  on:click|stopPropagation={() => addMod(mod)}
                 >
                   {#if adding[mod.project_id]}
                     {$t(

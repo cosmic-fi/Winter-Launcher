@@ -1,5 +1,6 @@
 <script>
 // @ts-nocheck
+
   import { onMount, onDestroy } from "svelte";
   import { t } from "../../stores/i18n";
   import { formatNumber } from "../../utils/helper";
@@ -230,9 +231,7 @@
           <button
             class="window-action-btn account-btn avatarcard-toggle-btn"
             aria-label="Active account"
-            onclick={() => {
-              activeModal.set('avatarCard')
-            }}
+            onclick={() => activeModal.set('avatarCard')}
           >
             <img
               class="account-face-icon"
@@ -316,6 +315,7 @@
         -webkit-app-region: drag;
         grid-area: header;
         padding: 10px 10px;
+        
         .left-header {
             display: flex;
             align-items: center;
@@ -430,7 +430,7 @@
                     width: 170px;
                     height: 34px;
                     background: linear-gradient(45deg, var(--accent-color), var(--accent-color-dark), var(--accent-color));
-                    box-shadow: 0 0 0 2px var(--accent-color-dark);
+                    box-shadow: 0 0 0 2px var(--accent-color-light);
                     padding: 5px 30px 5px 6px !important;
                     color: #fff6f0;
 

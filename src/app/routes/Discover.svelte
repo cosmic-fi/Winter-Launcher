@@ -516,6 +516,7 @@
         font-size: var(--font-size-body);
         display: flex;
         align-items: end;
+        
         :global(svg){
           opacity: .5;
           margin-bottom: 5px;

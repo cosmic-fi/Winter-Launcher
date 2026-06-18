@@ -177,12 +177,14 @@ body {
         }
     }
     .btn-primary{
-        background-color: var(--accent-color-dark) !important;
-        box-shadow: 0 0 0 2px var(--accent-color) !important;
+        background-color: var(--accent-color) !important;
+            box-shadow: 0 0 0 2px var(--accent-color-light) !important;
         color: #fff !important;
 
         &:hover{
-            background-color: var(--accent-color) !important;
+            color: #ffffff8f !important;
+                background-color: var(--accent-color-dark) !important;
+                box-shadow: 0 0 0 2px var(--accent-color) !important;
         }
     }
     .btn-default{

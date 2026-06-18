@@ -216,7 +216,7 @@
   <div class="page-header-section">
     <div class="page-section-header">
       <Palette size={24} />
-      <h1 class="section-title">{$t('mainContent.shaders.title')}</h1>
+      <span class="section-title">{$t('mainContent.shaders.title')}</span>
     </div>
   </div>
   <SearchBox 
@@ -345,13 +345,6 @@
   .section-group {
     display: flex;
     flex-direction: column;
-  }
-
-  .section-title {
-    gap: 5px;
-    display: flex;
-    font-weight: 500;
-    padding-block: 0.4rem;
   }
   
   .shots-grid {

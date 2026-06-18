@@ -1,9 +1,11 @@
 <script>
+// @ts-nocheck
+
   import { t } from "../../stores/i18n";
 
 
 </script>
-<div class="invoker fade-in">
+<div class="invoker fade-in" transition:fade={{ duration: 100 }}>
     <div class="wrapper">
         <span class="blink">{$t('invoker.loading')}</span>
         <p class="description">

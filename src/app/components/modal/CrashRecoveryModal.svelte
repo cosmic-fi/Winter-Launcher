@@ -9,6 +9,7 @@
   import { showToast } from '../../stores/ui.js';
   import { logger } from '../../utils/logger.js';
   import { t } from '../../stores/i18n.js';
+  import { fade, fly } from 'svelte/transition';
   
   export let instance = null;
   export let crashData = null;
@@ -88,8 +89,8 @@
 {#if instance && crashData}
   <!-- svelte-ignore a11y_no_static_element_interactions -->
   <!-- svelte-ignore a11y_click_events_have_key_events -->
-  <div class="modal-overlay" on:click={dismiss}>
-    <div class="crash-recovery-modal" on:click|stopPropagation>
+  <div class="modal-overlay" on:click={dismiss} transition:fade={{ duration: 100 }}>
+    <div class="crash-recovery-modal" on:click|stopPropagation transition:fly={{ y: 40, duration: 160, opacity: 0.9 }}>
       <div class="modal-header">
         <h3>
           <AlertTriangle size={20} style="color: var(--warning-color); margin-right: 8px;" />

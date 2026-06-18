@@ -315,7 +315,7 @@
 {#if open}
   <!-- svelte-ignore a11y_click_events_have_key_events -->
   <!-- svelte-ignore a11y_no_static_element_interactions -->
-  <div class="modal-overlay" on:click|self={close} transition:fade={{ duration: 120 }}>
+  <div class="modal-overlay" on:click|self={close} transition:fade={{ duration: 100 }}>
     <div
       class="modal-content"
       transition:fly={{ x: 40, duration: 160, opacity: 0.9 }}

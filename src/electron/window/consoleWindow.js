@@ -21,7 +21,7 @@ export const createConsoleWindow = (parentWindow = null) => {
     }
 
     consoleWindow = new BrowserWindow({
-        title: "WinterLauncher Console",
+        title: "Winter Launcher Console",
         width: 800,
         height: 600,
         minWidth: 600,

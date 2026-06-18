@@ -367,48 +367,6 @@
     on:search={handleSearch}
     on:filterOptionChange={handleFilterOptionChange}
   />
-  <!-- <div class="controls">
-    <div class="search-bar">
-      <input
-        type="text"
-        class="search-input"
-        placeholder={$t(
-          "mainContent.instances.browsers.resourcePackBrowser.searchPlaceholder",
-        )}
-        value={searchQuery}
-        on:input={handleSearch}
-      />
-      <button class="btn btn-default">
-        <Filter size={20} />
-      </button>
-    </div>
-    <div class="filters">
-      <CustomOptions
-        id="rp-category"
-        options={categories}
-        value={category}
-        disabled={loading}
-        preferredPosition="down-left"
-        on:optionchange={(e) => {
-          category = e.detail.value;
-          scrollToTop();
-          load(true);
-        }}
-      />
-      <CustomOptions
-        id="rp-sort"
-        options={sortOptions}
-        value={sort}
-        disabled={loading}
-        preferredPosition="down-right"
-        on:optionchange={(e) => {
-          sort = e.detail.value;
-          scrollToTop();
-          load(true);
-        }}
-      />
-    </div>
-  </div> -->
   {#if loading || initialLoad}
     <div class="list">
       <BrowserSkeleton count={itemCount} />
@@ -474,7 +432,7 @@
                 <!-- svelte-ignore a11y_consider_explicit_label -->
                 <button
                   class="btn btn-danger btn-sm"
-                  on:click={() => removeResourcePack(rp)}
+                  on:click|stopPropagation={() => removeResourcePack(rp)}
                 >
                   {$t(
                     "mainContent.instances.browsers.resourcePackBrowser.actions.remove",
@@ -484,7 +442,7 @@
                 <button
                   class="btn btn-accent btn-sm"
                   disabled={adding[rp.project_id || rp.slug || rp.id]}
-                  on:click={() => addResourcePack(rp)}
+                  on:click|stopPropagation={() => addResourcePack(rp)}
                 >
                   {#if adding[rp.project_id || rp.slug || rp.id]}
                     {$t(

@@ -6,6 +6,7 @@
     import { appVersion } from "../../utils/version";
     import { checkForUpdate, downloadAndInstallUpdateAutomatic } from "../../utils/updateChecker.js";
     import { AlertCircle, AlertOctagon, Heart, Info, MailWarning, Paperclip, X } from '@lucide/svelte';
+  import { fade, fly } from "svelte/transition";
 
     const { activeModal } = uiState;
     
@@ -25,8 +26,9 @@
     onkeydown={(e) => {
         if (e.key === 'Escape') onClose();
     }}
+    transition:fade={{ duration: 100 }}
 >
-    <div class="about-modal-content">
+    <div class="about-modal-content" transition:fly={{ y: 40, duration: 160, opacity: 0.5 }}>
         <div class="about-modal-header">
             <div class="header-title-cont">
                 <Info size={20} />
@@ -108,7 +110,7 @@
     .about-modal-content {
         background: var(--overlay-color);
         width: 90%;
-        width: 600px;
+        width: 700px;
         height: 500px;
         display: flex;
         flex-direction: column;

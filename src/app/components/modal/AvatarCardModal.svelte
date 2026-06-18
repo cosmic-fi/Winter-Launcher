@@ -65,7 +65,8 @@
     // Add event listener for outside clicks
     import { onMount } from "svelte";
     import { PlusIcon, User2, UserCog, UserSearch } from "@lucide/svelte";
-  import { image } from "../../utils/image";
+    import { image } from "../../utils/image";
+    import { fade, fly } from "svelte/transition";
     
     onMount(() => {
         const handleClickEvents = (event) => {
@@ -81,8 +82,8 @@
     $: accounts = $accountsStore;
 </script>
 
-<div class="avatar-modal">
-    <div class="avatar-model-wrapper" bind:this={avatarCardRef}>
+<div class="avatar-modal" transition:fade={{ duration: 100 }}>
+    <div class="avatar-model-wrapper" bind:this={avatarCardRef} transition:fly={{ y: -40, duration: 160, opacity: 0.9 }}>
         <div class="avatar-card">
             <div class="wrapper">
                 <div class="skin-container">

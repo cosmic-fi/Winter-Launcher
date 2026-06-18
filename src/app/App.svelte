@@ -36,7 +36,6 @@
       // Handle launch cancelled events
       const removeLaunchCancelledListener = window.electron.onLaunchCancelled((message) => {
         console.log('Launch cancelled:', message);
-        showToast(`Launch cancelled: ${message}`, 'info');
       });
 
       // Handle console closed events

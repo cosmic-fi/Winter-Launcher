@@ -32,23 +32,25 @@
   >
 
   <div class="right-section">
-    <div class="view-style-container">
-      <button 
-        class="grid-view active-style" 
-        class:active-style={layoutStyle === 'grid'}
-        on:click={setGridLayout}
-        >
-        <Grid2X2Icon size={20} />
-      </button>
-      <button 
-        class="list-view" 
-        class:active-style={layoutStyle === 'list'}
-        on:click={setListLayout}
-        >
-        <List size={20} />
-      </button>
-    </div>
-    <span class="seperator"></span>
+    {#if layoutStyle}
+      <div class="view-style-container">
+        <button 
+          class="grid-view active-style" 
+          class:active-style={layoutStyle === 'grid'}
+          on:click={setGridLayout}
+          >
+          <Grid2X2Icon size={20} />
+        </button>
+        <button 
+          class="list-view" 
+          class:active-style={layoutStyle === 'list'}
+          on:click={setListLayout}
+          >
+          <List size={20} />
+        </button>
+      </div>
+      <span class="seperator"></span>
+    {/if}
     <button class="btn-default" on:click={navigate}>
       {$t("mainContent.home.buttons.seeAll")}
       <ChevronRight size={16} />

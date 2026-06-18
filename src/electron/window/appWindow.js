@@ -16,7 +16,7 @@ const iconPath = `./public/icons/${os.platform() === "win32" ? "icon.ico" : "ico
  */
 const setAppWindow = () => {
     window = new BrowserWindow({
-        title: "WinterLauncher",
+        title: "Winter Launcher",
         width: 1024,
         height: 600,
         minWidth: 1024,

@@ -180,7 +180,7 @@
       <div class="card-bottom-meta">
         {#if loaders.length > 0}
           <div class="meta-loaders">
-            {#each ["forge", "neoforge", "fabric", "quilt"] as loader}
+            {#each ["forge", "neoforge", "fabric", "quilt"] as loader (loader)}
               {#if loaders.includes(loader)}
                 <img
                   src="/images/static/loaders/{loader === 'neoforge' ? 'neoforged' : loader}.png"
@@ -215,7 +215,7 @@
     
     {#if actions.length > 0}
       <div class="card-actions">
-        {#each actions as action}
+        {#each actions as action, i (i)}
           <button
             class="card-action btn btn-{action.variant || 'default'}"
             on:click={(e) => handleActionClick(action, e)}
@@ -250,11 +250,12 @@
 
   .card--clickable {
     cursor: pointer;
+    will-change: transform;
   }
 
   .card--clickable:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 0px var(--border-color);
+    border-color: var(--accent-color);
   }
 
   .card--small {

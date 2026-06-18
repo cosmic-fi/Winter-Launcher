@@ -116,7 +116,7 @@
     class="onboarding-overlay"
     on:keydown={handleKeydown}
     tabindex="0"
-    transition:fade={{ duration: 200 }}
+    transition:fade={{ duration: 100 }}
   >
     <div
       class="onboarding-modal"

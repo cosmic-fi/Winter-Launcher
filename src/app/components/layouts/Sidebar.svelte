@@ -214,6 +214,7 @@
                         gap: 8px;
                         text-shadow: none;
                         padding-block: 8px;
+                        padding-inline: 10px;
                         cursor: pointer;
                         transition: all 0.2s ease-in-out;
                     }
