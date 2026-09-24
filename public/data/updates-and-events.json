@@ -1,4 +1,12 @@
 {
-  "updates": [],
-  "events": []
+  "branch": {
+    "type": "ori",
+    "updates": [],
+    "events": []
+  },
+  "branch": {
+    "type": "winter",
+    "updates": [],
+    "events": []
+  },
 }
