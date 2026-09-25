@@ -1,11 +1,11 @@
 {
-  "branch": {
-    "type": "ori",
+  "content": {
+    "channel": "ori",
     "updates": [],
     "events": []
   },
-  "branch": {
-    "type": "winter",
+  "content": {
+    "channel": "winter",
     "updates": [],
     "events": []
   },
